@@ -25,7 +25,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'common_art_db',
 			'username'  => 'admin',
-			'password'  => 'password',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
