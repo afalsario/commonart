@@ -12,7 +12,7 @@ class UserTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users', function(Blueprint $table)
+		Schema::create('users', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('first_name', 100);
@@ -21,6 +21,7 @@ class UserTable extends Migration {
 			$table->string('password', 100);
 			$table->boolean('isAdmin');
 			$table->rememberToken();
+			$table->timestamps();
 		});
 	}
 
