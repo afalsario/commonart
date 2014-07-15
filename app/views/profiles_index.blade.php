@@ -1,25 +1,22 @@
 @extends('layouts.master')
 
-
 @section('content')
+These are all the artist
 
-<h2>This is the artist Profile page.</h2>
-
-One artist by id
-<br>
-<br>
+@foreach($profiles as $profile)
 <label>Name: </label>
 {{{ $profile->name }}}
 <br>
 <label>Title: </label>
 {{{ $profile->title }}}
 <br>
-<label>Weapon of Choice: </label>
+<label>Mediums: </label>
 {{{ $profile->mediums }}}
 <br>
-<label>About me: </label>
+<label>About Me: </label>
 {{{ $profile->about_me }}}
 <br>
-
+<br>
+@endforeach
 
 @stop

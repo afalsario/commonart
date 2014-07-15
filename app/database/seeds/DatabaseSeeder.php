@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder {
         Eloquent::unguard();
 
         $this->call('UserTableSeeder');
+        $this->call('ProfileTableSeeder');
     }
 }
 
@@ -30,4 +31,26 @@ class UserTableSeeder extends Seeder {
     }
 
 }
+
+class ProfileTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('profiles')->delete();
+
+        $profile = new Profile();
+        $profile->user_id = 1;
+        $profile->name = "Artist";
+        $profile->title = "Awesome Painter";
+        $profile->mediums = 'Paint';
+        $profile->about_me = 'This is my about me section.';
+        $profile->save();
+    }
+
+}
+
+
+
+
+
 
