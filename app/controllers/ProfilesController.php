@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends \BaseController {
+class ProfilesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,8 +9,8 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = User::all();
-    	return View::make('users')->with('users', $users);
+		$profiles = Profile::all();
+		return View::make('profiles_index')->with('profiles', $profiles);
 	}
 
 
@@ -21,7 +21,7 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('create_user');
+		//
 	}
 
 
@@ -32,26 +32,14 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		$user = new User();
+		$profile = Profile::findOrFail($id);
 
-		// create the validator
-        $validator = Validator::make(Input::all(), User::$rules);
+		$profile->name = Input::get('name');
+		$profile->title = Input::get('title');
+		$profile->about_me = Input::get('about_me');
+		$profile->save();
 
-        if($validator->fails())
-        {
-        	Session::flash('errorMessage', 'Error: User not saved. Please enter valid data.');
-            // validation failed, redirect to the user create page with validation errors and old inputs
-            return Redirect::back()->withInput()->withErrors($validator);
-        }
-        else
-        {
-			$user->username = Input::get('username');
-			$user->email = Input::get('email');
-			$user->password = Input::get('password');
-			$user->save();
-
-			return Redirect::action('UsersController@index');
-		}
+		return Redirect::action('ProfilesController@show', $profile->id);
 	}
 
 
@@ -63,7 +51,8 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+		return View::make('profile')->with('profile', $profile);
 	}
 
 
@@ -75,7 +64,8 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+        return View::make('edit_profile')->with('profile', $profile);
 	}
 
 
@@ -87,7 +77,14 @@ class UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+
+		$profile->name = Input::get('name');
+		$profile->title = Input::get('title');
+		$profile->about_me = Input::get('about_me');
+		$profile->save();
+
+		return Redirect::action('ProfilesController@show', $profile->id);
 	}
 
 

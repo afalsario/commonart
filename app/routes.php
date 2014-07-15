@@ -23,3 +23,5 @@ Route::get('/profile', 'HomeController@showProfile');
 Route::get('/post', 'HomeController@showPost');
 
 Route::resource('users', 'UsersController');
+
+Route::resource('profiles', 'ProfilesController');
