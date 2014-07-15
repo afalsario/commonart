@@ -39,7 +39,7 @@ class UsersController extends \BaseController {
 
         if($validator->fails())
         {
-        	Session::flash('errorMessage', 'Error: Post not saved. Please enter valid data.');
+        	Session::flash('errorMessage', 'Error: User not saved. Please enter valid data.');
             // validation failed, redirect to the post create page with validation errors and old inputs
             return Redirect::back()->withInput()->withErrors($validator);
         }
