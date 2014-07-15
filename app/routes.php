@@ -11,5 +11,18 @@
 |
 */
 
+
+Route::get('/', 'HomeController@showHomepage');
+
+Route::get('/login', 'HomeController@showLogin');
+Route::post('/login', 'HomeController@doLogin');
+Route::get('/logout', 'HomeController@logout');
+
+Route::get('/profile', 'HomeController@showProfile');
+
+Route::get('/post', 'HomeController@showPost');
+
 Route::resource('users', 'UsersController');
+
 Route::resource('profiles', 'ProfilesController');
+
