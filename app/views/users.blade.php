@@ -1,8 +1,6 @@
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
 
 @foreach($users as $user)
 Username: {{{ $user->username }}}
@@ -16,6 +14,4 @@ Admin: {{{ $user->isAdmin }}}
 <br>
 @endforeach
 
-
-</body>
-</html>
+@stop

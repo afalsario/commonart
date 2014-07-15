@@ -2,9 +2,8 @@
 
 @section('content')
 
-<title>Registration</title>
+	<h1>Heres a heading </h1>
 
-<h2>Registration Page</h2>
 
 {{ Form::open(array('action' => 'UsersController@store')) }}
 {{ Form::label('Username')}}
@@ -18,6 +17,5 @@
 {{ $errors->first('password', '<span class="help-block">:message</span></br>') }}
 {{ Form::submit('Submit') }}
 {{ Form::close() }}
-
 
 @stop
