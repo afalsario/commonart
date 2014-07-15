@@ -1,8 +1,9 @@
-<html>
-<head>
-    <title>Registration</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
+
+<title>Registration</title>
+
 <h2>Registration Page</h2>
 
 {{ Form::open(array('action' => 'UsersController@store')) }}
@@ -18,5 +19,5 @@
 {{ Form::submit('Submit') }}
 {{ Form::close() }}
 
-</body>
-</html>
+
+@stop
