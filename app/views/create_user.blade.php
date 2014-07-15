@@ -1,8 +1,8 @@
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
+
+	<h1>Heres a heading </h1>
 
 {{ Form::open(array('action' => 'UsersController@store')) }}
 {{ Form::label('Username')}}
@@ -14,5 +14,4 @@
 {{ Form::submit('Submit') }}
 {{ Form::close() }}
 
-</body>
-</html>
+@stop
