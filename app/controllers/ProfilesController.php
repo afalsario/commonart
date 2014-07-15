@@ -9,7 +9,8 @@ class ProfilesController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$profiles = Profile::all();
+		return View::make('profiles_index')->with('profiles', $profiles);
 	}
 
 
@@ -31,7 +32,14 @@ class ProfilesController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$profile = Profile::findOrFail($id);
+
+		$profile->name = Input::get('name');
+		$profile->title = Input::get('title');
+		$profile->about_me = Input::get('about_me');
+		$profile->save();
+
+		return Redirect::action('ProfilesController@show', $profile->id);
 	}
 
 
@@ -43,7 +51,8 @@ class ProfilesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+		return View::make('profile')->with('profile', $profile);
 	}
 
 
@@ -55,7 +64,8 @@ class ProfilesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+        return View::make('edit_profile')->with('profile', $profile);
 	}
 
 
@@ -67,7 +77,14 @@ class ProfilesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+
+		$profile->name = Input::get('name');
+		$profile->title = Input::get('title');
+		$profile->about_me = Input::get('about_me');
+		$profile->save();
+
+		return Redirect::action('ProfilesController@show', $profile->id);
 	}
 
 
