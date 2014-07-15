@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', 'HomeController@showHomepage');
 
 Route::get('/login', 'HomeController@showLogin');
@@ -28,3 +29,6 @@ Route::get('/post', 'HomeController@showPost');
 
 
 
+=======
+Route::resource('users', 'UsersController');
+>>>>>>> master
