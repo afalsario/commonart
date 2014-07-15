@@ -12,3 +12,4 @@
 */
 
 Route::resource('users', 'UsersController');
+Route::resource('profiles', 'ProfilesController');
