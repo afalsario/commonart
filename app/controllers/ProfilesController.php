@@ -21,7 +21,7 @@ class ProfilesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('create_edit_profile');
 	}
 
 
@@ -32,14 +32,7 @@ class ProfilesController extends \BaseController {
 	 */
 	public function store()
 	{
-		$profile = Profile::findOrFail($id);
-
-		$profile->name = Input::get('name');
-		$profile->title = Input::get('title');
-		$profile->about_me = Input::get('about_me');
-		$profile->save();
-
-		return Redirect::action('ProfilesController@show', $profile->id);
+		return $this->update(null);
 	}
 
 
@@ -65,7 +58,7 @@ class ProfilesController extends \BaseController {
 	public function edit($id)
 	{
 		$profile = Profile::findOrFail($id);
-        return View::make('edit_profile')->with('profile', $profile);
+        return View::make('create_edit_profile')->with('profile', $profile);
 	}
 
 
@@ -77,7 +70,13 @@ class ProfilesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$profile = Profile::findOrFail($id);
+		$profile = new Profile();
+
+		if($id != null)
+		{
+			$profile = Profile::findOrFail($id);
+		}
+
 
 		$validator = Validator::make(Input::all(), Profile::$rules);
 
@@ -117,7 +116,11 @@ class ProfilesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+        $profile->delete();
+        Session::flash('successMessage', 'Profile deleted successfully');
+
+        return Redirect::action('ProfilesController@index');
 	}
 
 
