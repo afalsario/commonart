@@ -2,12 +2,13 @@
 
 @section('content')
 
-@if(isset($profile))
-<h2>Edit Profile</h2>
-{{ Form::model($profile, array('action' => array('ProfilesController@update', $profile->id), 'files' => true, 'method' => 'PUT')) }}
+@if(isset($user))
+<h2>Edit User</h2>
+
+{{ Form::model($user, array('action' => array('usersController@update', $user->id), 'files' => true, 'method' => 'PUT')) }}
 @else
-<h2>Create Profile</h2>
-{{ Form::open(array('action' => 'ProfilesController@store', 'files' => true)) }}
+<h2>Create user</h2>
+{{ Form::open(array('action' => 'UsersController@store', 'files' => true)) }}
 @endif
 
 <h3>Upload Image</h3>
