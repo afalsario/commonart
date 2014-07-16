@@ -3,8 +3,6 @@
 
 @section('content')
 
-{{{ $profile->user->username }}}
-
 <h2>This is the artist Profile page.</h2>
 <a href="{{ action('HomeController@showHomepage')}}">Home</a> <br>
 <a href="{{ action('ProfilesController@index')}}">back to Artists</a>
@@ -32,8 +30,8 @@
 <label>About me: </label>
 {{{ $profile->about_me }}}
 <br>
-@if (Auth::check())  
-<a href="{{ action('ProfilesController@edit')}}">Edit</a>
+@if (Auth::user()->id == $profile->user_id)
+<a href="{{ action('ProfilesController@edit', $profile->user_id)}}">Edit</a>
 @endif
 
 @stop

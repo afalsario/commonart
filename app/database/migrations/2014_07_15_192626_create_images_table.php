@@ -14,11 +14,11 @@ class CreateImagesTable extends Migration {
 	{
 		Schema::create('images', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->primary('img_id');
 			$table->string('img_title', 100);
 			$table->string('img_path', 200)->nullable();
 			$table->integer('img_id')->unsigned();
-		    $table->foreign('img_id')->references('id')->on('profiles');
+		    $table->foreign('img_id')->references('user_id')->on('profiles');
 			$table->string('img_desc', 200);
 			$table->decimal('price', 6, 2);
 			$table->timestamps();

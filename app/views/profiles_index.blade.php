@@ -23,7 +23,7 @@
 <label>About Me: </label>
  {{{ $profile->aboutSnippit() }}}
 <br>
-<a class="btn btn-primary" href="{{ action('ProfilesController@show', array($profile->id)) }}"> Profile <span class="glyphicon glyphicon-chevron-right"></span></a>
+<a class="btn btn-primary" href="{{ action('ProfilesController@show', array($profile->user_id)) }}"> Profile <span class="glyphicon glyphicon-chevron-right"></span></a>
 <br>
 <hr>
 @endforeach
