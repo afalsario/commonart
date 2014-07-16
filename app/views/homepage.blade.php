@@ -10,6 +10,6 @@
   <a href="{{ action('HomeController@doLogin')}}">Login</a>
 @endif
 <br>	
- <a href="{{ action('ProfilesController@index')}}">View Artists</a>
+ <a href="{{ action('UsersController@index')}}">View Artists</a>
 
 @stop

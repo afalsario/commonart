@@ -3,12 +3,13 @@
 
 @section('content')
 
-{{{ $profile->user->username }}}
+
 
 <h2>This is the artist Profile page.</h2>
 <a href="{{ action('HomeController@showHomepage')}}">Home</a> <br>
-<a href="{{ action('ProfilesController@index')}}">back to Artists</a>
+<a href="{{ action('UsersController@index')}}">back to Artists</a>
 <br>
+
 @if (Auth::check())      	
   <a href="{{ action('HomeController@logout')}}">Logout</a>
 @else
@@ -17,23 +18,23 @@
 
 <hr>
 <br>
-@if ($profile->img_path)
-    <img src="{{{ $profile->img_path }}}" class="img-responsive">
+@if ($user->img_path)
+    <img src="{{{ $user->img_path }}}" class="img-responsive">
 @endif
 <label>Name: </label>
-{{{ $profile->name }}}
+{{{ $user->name }}}
 <br>
 <label>Title: </label>
-{{{ $profile->title }}}
+{{{ $user->title }}}
 <br>
 <label>Weapon of Choice: </label>
-{{{ $profile->mediums }}}
+{{{ $user->mediums }}}
 <br>
 <label>About me: </label>
-{{{ $profile->about_me }}}
+{{{ $user->about_me }}}
 <br>
 @if (Auth::check())  
-<a href="{{ action('ProfilesController@edit')}}">Edit</a>
+<a href="{{ action('UsersController@edit')}}">Edit</a>
 @endif
 
 @stop

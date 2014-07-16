@@ -10,20 +10,20 @@
   <a href="{{ action('HomeController@doLogin')}}">Login</a>
 @endif
 <hr>
-@foreach($profiles as $profile)
+@foreach($users as $user)
 <label>Name: </label>
-{{{ $profile->name }}}
+{{{ $user->name }}}
 <br>
 <label>Title: </label>
-{{{ $profile->title }}}
+{{{ $user->title }}}
 <br>
 <label>Mediums: </label>
-{{{ $profile->mediums }}}
+{{{ $user->mediums }}}
 <br>
 <label>About Me: </label>
- {{{ $profile->aboutSnippit() }}}
+ {{{ $user->aboutSnippit() }}}
 <br>
-<a class="btn btn-primary" href="{{ action('ProfilesController@show', array($profile->id)) }}"> Profile <span class="glyphicon glyphicon-chevron-right"></span></a>
+<a class="btn btn-primary" href="{{ action('UsersController@show', array($user->id)) }}"> Profile <span class="glyphicon glyphicon-chevron-right"></span></a>
 <br>
 <hr>
 @endforeach
