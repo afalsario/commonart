@@ -9,5 +9,7 @@
 @else
   <a href="{{ action('HomeController@doLogin')}}">Login</a>
 @endif
+<br>	
+ <a href="{{ action('ProfilesController@index')}}">View Artists</a>
 
 @stop
