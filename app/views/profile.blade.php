@@ -3,6 +3,8 @@
 
 @section('content')
 
+{{{ $profile->user->username }}}
+
 <h2>This is the artist Profile page.</h2>
 
 One artist by id
