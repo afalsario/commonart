@@ -1,8 +1,15 @@
 @extends('layouts.master')
 
 @section('content')
-These are all the artist
-
+<h1>Artists</h1> <br>
+<a href="{{ action('HomeController@showHomepage')}}">Home</a>
+<br>
+@if (Auth::check())      	
+  <a href="{{ action('HomeController@logout')}}">Logout</a>
+@else
+  <a href="{{ action('HomeController@doLogin')}}">Login</a>
+@endif
+<hr>
 @foreach($profiles as $profile)
 <label>Name: </label>
 {{{ $profile->name }}}
@@ -14,9 +21,11 @@ These are all the artist
 {{{ $profile->mediums }}}
 <br>
 <label>About Me: </label>
-{{{ $profile->about_me }}}
+ {{{ $profile->aboutSnippit() }}}
 <br>
+<a class="btn btn-primary" href="{{ action('ProfilesController@show', array($profile->id)) }}"> Profile <span class="glyphicon glyphicon-chevron-right"></span></a>
 <br>
+<hr>
 @endforeach
 
 @stop

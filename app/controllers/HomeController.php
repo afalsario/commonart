@@ -28,24 +28,26 @@ class HomeController extends BaseController {
 	public function doLogin()
 	{
 		$email = Input::get('email');
-		$password = Input::get('password'); 
+		$password = Input::get('password');
+		 
 		
 		if (Auth::attempt(array('email'=>$email, 'password' => $password)))
 		{
 			Session::flash('infoMessage', 'You are now logged in!');
-			return Redirect::action('HomeController@showHomepage');
+			return Redirect::intended();
 		}
 		else
 		{
 			Session::flash('errorMessage', "Email or password not found.");
-			return Redirect::action('HomeController@showLogin');
+			return Redirect::back();
 		}
 	}
 
 	public function logout()
 	{
 		Auth::logout();
-		return Redirect::action('HomeController@showHomepage');
+		Session::flash('logoutMessage', "You are logged out! ");
+		return Redirect::back()->with('logoutMessage');
 	}
 
 	public function showProfile()
