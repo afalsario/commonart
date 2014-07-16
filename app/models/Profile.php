@@ -20,4 +20,9 @@ class Profile extends Eloquent{
         $image->move($systemPath, $imageName);
         $this->img_path = '/' . $this->imgDir . '/' . $imageName;
     }
+
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }
 }
