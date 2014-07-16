@@ -23,7 +23,9 @@
 <label>About Me: </label>
  {{{ $user->aboutSnippit() }}}
 <br>
+
 <a class="btn btn-primary" href="{{ action('UsersController@show', array($user->id)) }}"> Profile <span class="glyphicon glyphicon-chevron-right"></span></a>
+
 <br>
 <hr>
 @endforeach

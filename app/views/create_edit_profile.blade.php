@@ -3,11 +3,12 @@
 @section('content')
 
 @if(isset($user))
-<h2>Edit User</h2>
+<h2>Edit Profile</h2>
 
-{{ Form::model($user, array('action' => array('usersController@update', $user->id), 'files' => true, 'method' => 'PUT')) }}
+{{ Form::model($user, array('action' => array('UsersController@update', $user->id), 'files' => true, 'method' => 'PUT')) }}
+
 @else
-<h2>Create user</h2>
+<h2>Create Profile</h2>
 {{ Form::open(array('action' => 'UsersController@store', 'files' => true)) }}
 @endif
 

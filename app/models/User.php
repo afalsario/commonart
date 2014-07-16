@@ -34,11 +34,31 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	[
         'username' => 'required|max:100',
         'email' => 'required|max:100',
-        'password' => 'required|min:3|max:100'
+        'password' => 'required|min:3|max:100',
+        'name' => 'max:100',
+        'title' => 'max:100',
+        'about_me' => 'max:1000'
     ];
 
-    public function profile()
+    public function addUpLoadedImage($image)
     {
-        return $this->hasOne('Profile', 'user_id');
+        $systemPath = public_path() . '/' . $this->imgDir . '/';
+        $imageName = $this->id . '-' . $image->getClientOriginalName();
+        $image->move($systemPath, $imageName);
+        $this->img_path = '/' . $this->imgDir . '/' . $imageName;
     }
+
+    public function aboutSnippit()
+    {
+
+        $about_me = $this->about_me;
+
+        if (strlen($about_me) > 100)  {
+            return substr($this->about_me, 0, 100)  . "..." . PHP_EOL ;
+        } else {
+            return substr($this->about_me, 0, 100) . PHP_EOL ;
+        }
+
+    }
+
 }

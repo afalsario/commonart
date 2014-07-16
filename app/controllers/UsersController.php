@@ -21,7 +21,7 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('create_user');
+		return View::make('create_edit_profile');
 	}
 
 
@@ -32,26 +32,7 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		$user = new User();
-
-		// create the validator
-        $validator = Validator::make(Input::all(), User::$rules);
-
-        if($validator->fails())
-        {
-        	Session::flash('errorMessage', 'Error: User not saved. Please enter valid data.');
-            // validation failed, redirect to the user create page with validation errors and old inputs
-            return Redirect::back()->withInput()->withErrors($validator);
-        }
-        else
-        {
-			$user->username = Input::get('username');
-			$user->email = Input::get('email');
-			$user->password = Input::get('password');
-			$user->save();
-
-			return Redirect::action('UsersController@index');
-		}
+		return $this->update(null);
 	}
 
 
@@ -63,7 +44,8 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$user = User::findOrFail($user_id);
+		return View::make('profile')->with('user', $user);
 	}
 
 
@@ -75,7 +57,8 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = User::findOrFail($id);
+        return View::make('create_edit_profile')->with('user', $user);
 	}
 
 
@@ -87,7 +70,43 @@ class UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$user = new User();
+
+		if($id != null)
+		{
+			$user = User::findOrFail($id);
+		}
+
+		$user->user()->associate(Auth::user());
+
+		$validator = Validator::make(Input::all(), User::$rules);
+
+		if($validator->fails())
+		{
+			Session::flash('errorMessage', 'Error: Profile not saved. Please enter valid data.');
+            // validation failed, redirect to the post create page with validation errors and old inputs
+            return Redirect::back()->withInput()->withErrors($validator);
+		}
+		else
+		{
+
+			$user->id = Auth::user()->id;
+			$user->name = Input::get('name');
+			$user->title = Input::get('title');
+			$user->about_me = Input::get('about_me');
+			$user->save();
+
+			// checking for valid image
+	        if(Input::hasFile('image') && Input::file('image')->isValid())
+	        {
+	            $user->addUploadedImage(Input::file('image'));
+	            $user->save();
+	        }
+
+	        Session::flash('successMessage', 'Action successful!');
+
+			return Redirect::action('UsersController@show', $user->id);
+		}
 	}
 
 
@@ -99,7 +118,11 @@ class UsersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$user = User::findOrFail($id);
+        $user->delete();
+        Session::flash('successMessage', 'Profile deleted successfully');
+
+        return Redirect::action('UsersController@index');
 	}
 
 
