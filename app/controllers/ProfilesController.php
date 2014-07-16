@@ -79,12 +79,33 @@ class ProfilesController extends \BaseController {
 	{
 		$profile = Profile::findOrFail($id);
 
-		$profile->name = Input::get('name');
-		$profile->title = Input::get('title');
-		$profile->about_me = Input::get('about_me');
-		$profile->save();
+		$validator = Validator::make(Input::all(), Profile::$rules);
 
-		return Redirect::action('ProfilesController@show', $profile->id);
+		if($validator->fails())
+		{
+			Session::flash('errorMessage', 'Error: Profile not saved. Please enter valid data.');
+            // validation failed, redirect to the post create page with validation errors and old inputs
+            return Redirect::back()->withInput()->withErrors($validator);
+		}
+		else
+		{
+
+			$profile->name = Input::get('name');
+			$profile->title = Input::get('title');
+			$profile->about_me = Input::get('about_me');
+			$profile->save();
+
+			// checking for valid image
+	        if(Input::hasFile('image') && Input::file('image')->isValid())
+	        {
+	            $profile->addUploadedImage(Input::file('image'));
+	            $profile->save();
+	        }
+
+	        Session::flash('successMessage', 'Action successful!');
+
+			return Redirect::action('ProfilesController@show', $profile->id);
+		}
 	}
 
 
