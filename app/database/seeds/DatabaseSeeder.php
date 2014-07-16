@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder {
         Eloquent::unguard();
 
         $this->call('UserTableSeeder');
-        $this->call('ProfileTableSeeder');
     }
 }
 
@@ -23,28 +22,14 @@ class UserTableSeeder extends Seeder {
         DB::table('users')->delete();
 
         $user = new User();
-        $user->username = 'Admin';
+        $user->name = 'Admin';
         $user->email = 'admin1@codeup.com';
         $user->password = 'password';
         $user->isAdmin = true;
+        $user->title = "Awesome Painter";
+        $user->mediums = 'Paint';
+        $user->about_me = 'This is my about me section.';
         $user->save();
-    }
-
-}
-
-class ProfileTableSeeder extends Seeder {
-
-    public function run()
-    {
-        DB::table('profiles')->delete();
-
-        $profile = new Profile();
-        $profile->user_id = 1;
-        $profile->name = "Artist";
-        $profile->title = "Awesome Painter";
-        $profile->mediums = 'Paint';
-        $profile->about_me = 'This is my about me section.';
-        $profile->save();
     }
 
 }

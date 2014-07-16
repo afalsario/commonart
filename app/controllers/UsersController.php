@@ -10,7 +10,7 @@ class UsersController extends \BaseController {
 	public function index()
 	{
 		$users = User::all();
-    	return View::make('users')->with('users', $users);
+    	return View::make('profiles_index')->with('users', $users);
 	}
 
 
@@ -32,7 +32,16 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		return $this->update(null);
+		$user = new User();
+
+		$user->name = Input::get('name');
+		$user->password = Input::get('password');
+		$user->email = Input::get('email');
+		$user->title = "";
+		$user->about_me = "";
+		$user->save();
+
+		return Redirect::action('UsersController@show', $user->id);
 	}
 
 
@@ -44,7 +53,7 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = User::findOrFail($user_id);
+		$user = User::findOrFail($id);
 		return View::make('profile')->with('user', $user);
 	}
 
@@ -70,16 +79,10 @@ class UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$user = new User();
 
-		if($id != null)
-		{
-			$user = User::findOrFail($id);
-		}
+		$user = User::findOrFail($id);
 
-		$user->user()->associate(Auth::user());
-
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make(Input::all(), User::$profile_rules);
 
 		if($validator->fails())
 		{
@@ -90,8 +93,8 @@ class UsersController extends \BaseController {
 		else
 		{
 
-			$user->id = Auth::user()->id;
 			$user->name = Input::get('name');
+			$user->password = Input::get('password');
 			$user->title = Input::get('title');
 			$user->about_me = Input::get('about_me');
 			$user->save();

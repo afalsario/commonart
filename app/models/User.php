@@ -16,6 +16,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+    protected $imgDir = 'img-upload';
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -32,10 +34,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public static $rules =
 	[
-        'username' => 'required|max:100',
+        'name' => 'required|max:100',
         'email' => 'required|max:100',
         'password' => 'required|min:3|max:100',
-        'name' => 'max:100',
+    ];
+
+    public static $profile_rules =
+    [
         'title' => 'max:100',
         'about_me' => 'max:1000'
     ];

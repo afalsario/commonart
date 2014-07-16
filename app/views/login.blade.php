@@ -20,9 +20,9 @@
 <div class="form-group">
 	<h2 class="form-signin-heading"><span class="glyphicon glyphicon-eye-open"></span>Sign Up</h2>
 {{ Form::open(array('action' => 'UsersController@store')) }}
-	<tr>{{ Form::label('Username')}}</tr>
-	<tr>{{ Form::text('username') }}</tr>
-	<tr>{{ $errors->first('username', '<span class="help-block">:message</span></br>') }}</tr>
+	<tr>{{ Form::label('Name')}}</tr>
+	<tr>{{ Form::text('name') }}</tr>
+	<tr>{{ $errors->first('name', '<span class="help-block">:message</span></br>') }}</tr>
 	<tr>{{ Form::label('Email Address') }}</tr>
 	<tr>{{ Form::text('email') }}</tr>
 	<tr>{{ $errors->first('email', '<span class="help-block">:message</span></br>') }}</tr>
