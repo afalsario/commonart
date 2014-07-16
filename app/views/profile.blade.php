@@ -8,6 +8,9 @@
 One artist by id
 <br>
 <br>
+@if ($profile->img_path)
+    <img src="{{{ $profile->img_path }}}" class="img-responsive">
+@endif
 <label>Name: </label>
 {{{ $profile->name }}}
 <br>
