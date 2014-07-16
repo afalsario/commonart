@@ -21,7 +21,7 @@ class ProfilesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('create_edit_profile');
 	}
 
 
@@ -32,14 +32,7 @@ class ProfilesController extends \BaseController {
 	 */
 	public function store()
 	{
-		$profile = Profile::findOrFail($id);
-
-		$profile->name = Input::get('name');
-		$profile->title = Input::get('title');
-		$profile->about_me = Input::get('about_me');
-		$profile->save();
-
-		return Redirect::action('ProfilesController@show', $profile->id);
+		return $this->update(null);
 	}
 
 
@@ -65,7 +58,7 @@ class ProfilesController extends \BaseController {
 	public function edit($id)
 	{
 		$profile = Profile::findOrFail($id);
-        return View::make('edit_profile')->with('profile', $profile);
+        return View::make('create_edit_profile')->with('profile', $profile);
 	}
 
 
@@ -77,14 +70,41 @@ class ProfilesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$profile = Profile::findOrFail($id);
+		$profile = new Profile();
 
-		$profile->name = Input::get('name');
-		$profile->title = Input::get('title');
-		$profile->about_me = Input::get('about_me');
-		$profile->save();
+		if($id != null)
+		{
+			$profile = Profile::findOrFail($id);
+		}
 
-		return Redirect::action('ProfilesController@show', $profile->id);
+
+		$validator = Validator::make(Input::all(), Profile::$rules);
+
+		if($validator->fails())
+		{
+			Session::flash('errorMessage', 'Error: Profile not saved. Please enter valid data.');
+            // validation failed, redirect to the post create page with validation errors and old inputs
+            return Redirect::back()->withInput()->withErrors($validator);
+		}
+		else
+		{
+
+			$profile->name = Input::get('name');
+			$profile->title = Input::get('title');
+			$profile->about_me = Input::get('about_me');
+			$profile->save();
+
+			// checking for valid image
+	        if(Input::hasFile('image') && Input::file('image')->isValid())
+	        {
+	            $profile->addUploadedImage(Input::file('image'));
+	            $profile->save();
+	        }
+
+	        Session::flash('successMessage', 'Action successful!');
+
+			return Redirect::action('ProfilesController@show', $profile->id);
+		}
 	}
 
 
@@ -96,7 +116,11 @@ class ProfilesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$profile = Profile::findOrFail($id);
+        $profile->delete();
+        Session::flash('successMessage', 'Profile deleted successfully');
+
+        return Redirect::action('ProfilesController@index');
 	}
 
 

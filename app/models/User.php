@@ -37,4 +37,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'password' => 'required|min:3|max:100'
     ];
 
+    public function profile()
+    {
+        return $this->hasOne('Profile', 'user_id');
+    }
 }

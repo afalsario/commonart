@@ -3,6 +3,8 @@
 
 @section('content')
 
+{{{ $profile->user->username }}}
+
 <h2>This is the artist Profile page.</h2>
 <a href="{{ action('HomeController@showHomepage')}}">Home</a> <br>
 <a href="{{ action('ProfilesController@index')}}">back to Artists</a>
@@ -15,6 +17,9 @@
 
 <hr>
 <br>
+@if ($profile->img_path)
+    <img src="{{{ $profile->img_path }}}" class="img-responsive">
+@endif
 <label>Name: </label>
 {{{ $profile->name }}}
 <br>
