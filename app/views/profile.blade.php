@@ -32,7 +32,7 @@
 {{{ $user->about_me }}}
 <br>
 
-@if (Auth::check())
+@if (Auth::check() && (Auth::user()->id == $user->id))
 <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
 @endif
 

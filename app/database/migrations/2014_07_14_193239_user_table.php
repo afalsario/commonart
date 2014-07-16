@@ -15,12 +15,11 @@ class UserTable extends Migration {
 		Schema::create('users', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('username', 100)->unique();
+			$table->string('name', 100);
+			$table->boolean('isAdmin');
 			$table->string('email', 100)->unique();
 			$table->string('password', 100);
-			$table->boolean('isAdmin');
 			$table->string('img_path', 200)->nullable();
-			$table->string('name', 100);
 			$table->string('title', 100)->nullable();
 			$table->string('mediums', 100);
 			$table->text('about_me', 1000);
