@@ -53,4 +53,9 @@ class HomeController extends BaseController {
 	{
 		return View::make('profile');
 	}
+
+	public function showAbout()
+	{
+		return View::make('about');
+	}
 }
