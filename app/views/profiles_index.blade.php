@@ -39,6 +39,11 @@
 </p>             
                 </div>
             </div>
+
+<a class="btn btn-primary" href="{{ action('ImageController@show', array($user->id)) }}"> Gallery <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+<br>
+<hr>
 @endforeach
 
             <!-- Pagination -->

@@ -25,6 +25,6 @@ Route::resource('profiles', 'UsersController');
 
 Route::get('/about', 'HomeController@showAbout');
 
-
+Route::resource('gallery', 'ImageController');
 
 
