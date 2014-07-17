@@ -10,7 +10,7 @@ class ImageController extends \BaseController {
 	public function index()
 	{
 		$images = Image::all();
-		return View::make('gallery')->with('images', $images);
+    	return View::make('gallery')->with('images', $images);
 	}
 
 
@@ -32,16 +32,7 @@ class ImageController extends \BaseController {
 	 */
 	public function store()
 	{
-		$image = new Image();
-
-		$image->user_id = Auth::user()->id;
-
-		if(Input::hasFile('image') && Input::file('image')->isValid())
-	        {
-	            $image->addUploadedImage(Input::file('image'));
-	            $image->save();
-	        }
-	    return View::make('gallery');
+		return $this->update(null);
 	}
 
 
@@ -53,8 +44,8 @@ class ImageController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		// $images = Image::with('user');
-		return View::make('gallery')->with('images', $images);
+		$image = Image::findOrFail($id);
+		return View::make('image')->with('image', $image);
 	}
 
 
@@ -67,7 +58,7 @@ class ImageController extends \BaseController {
 	public function edit($id)
 	{
 		$image = Image::findOrFail($id);
-		return View::make('gallery');
+		return View::make('edit_gallery')->with('image', $image);
 	}
 
 
@@ -79,13 +70,26 @@ class ImageController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$image = Image::findOrFail($id);
+		$image = new Image();
+
+		 if($id != null)
+        {
+            $image = Image::findOrFail($id);
+        }
+
+		$image->user_id = Auth::user()->id;
+
+		$image->img_title = Input::get('img_title');
+		$image->price = Input::get('price');
+		$image->img_desc = Input::get('img_desc');
+		$image->save();
 
 		if(Input::hasFile('image') && Input::file('image')->isValid())
 	        {
-	            $user->addUploadedImage(Input::file('image'));
-	            $user->save();
+	            $image->addUploadedImage(Input::file('image'));
+	            $image->save();
 	        }
+	    return Redirect::action('ImageController@show', $image->id);
 	}
 
 

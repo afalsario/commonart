@@ -34,6 +34,9 @@
 
 @foreach($user->image as $image)
 <img src="{{{ $image->img_path }}}" class="img-responsive">
+{{{ $image->img_title }}}
+{{{ $image->price }}}
+{{{ $image->img_desc }}}
 @endforeach
 
 @if (Auth::check() && (Auth::user()->id == $user->id))
