@@ -53,7 +53,7 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = User::findOrFail($id);
+		$user = User::with('image')->findOrFail($id);
 		return View::make('profile')->with('user', $user);
 	}
 
