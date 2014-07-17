@@ -8,8 +8,13 @@
 
 <h3>Upload Image</h3>
 
+@if ($user->img_path)
+    <img src="{{{ $user->img_path }}}" class="img-responsive">
+@endif
+
 {{ Form::file('image') }}
 <br>
+
 {{ Form::label('Name')}}
 <br>
 {{ Form::text('name') }}
@@ -28,5 +33,6 @@
 <br>
 {{ Form::submit('Submit') }}
 {{ Form::close() }}
-
 @stop
+
+

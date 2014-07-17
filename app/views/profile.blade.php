@@ -32,6 +32,10 @@
 {{{ $user->about_me }}}
 <br>
 
+@foreach($user->image as $image)
+<img src="{{{ $image->img_path }}}" class="img-responsive">
+@endforeach
+
 @if (Auth::check() && (Auth::user()->id == $user->id))
 <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
 @endif
