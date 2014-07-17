@@ -4,8 +4,7 @@
 @section('content')
 
 <h2>This is the artist Profile page.</h2>
-<a href="{{ action('HomeController@showHomepage')}}">Home</a> <br>
-<a href="{{ action('UsersController@index')}}">back to Artists</a>
+
 <br>
 
 @if (Auth::check())

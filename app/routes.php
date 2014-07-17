@@ -23,5 +23,8 @@ Route::get('/post', 'HomeController@showPost');
 
 Route::resource('profiles', 'UsersController');
 
+Route::get('/about', 'HomeController@showAbout');
+
+
 
 
