@@ -96,6 +96,7 @@ class UsersController extends \BaseController {
 			$user->name = Input::get('name');
 			$user->password = Input::get('password');
 			$user->title = Input::get('title');
+			$user->mediums = Input::get('mediums');
 			$user->about_me = Input::get('about_me');
 			$user->save();
 
