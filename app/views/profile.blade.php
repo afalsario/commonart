@@ -25,7 +25,7 @@
 <label>Title: </label>
 {{{ $user->title }}}
 <br>
-<label>Weapon of Choice: </label>
+<label>Medium: </label>
 {{{ $user->mediums }}}
 <br>
 <label>About me: </label>

@@ -18,6 +18,10 @@
 <br>
 {{ Form::text('title') }}
 <br>
+{{ Form::label('Mediums') }}
+<br>
+{{ Form::text('mediums') }}
+<br>
 {{ Form::label('About Me')}}
 <br>
 {{ Form::textarea('about_me') }}
