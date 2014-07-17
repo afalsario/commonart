@@ -39,6 +39,10 @@ class UsersController extends \BaseController {
 		$user->email = Input::get('email');
 		$user->title = "";
 		$user->about_me = "";
+
+		// handle image manipulation
+		$user->profile_image = User::uploadProfileImage();
+
 		$user->save();
 
 		return Redirect::action('UsersController@show', $user->id);
