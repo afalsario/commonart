@@ -7,6 +7,16 @@ class UsersController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
+// 	public function __construct()
+// {
+//     // call base controller constructor
+//     parent::__construct();
+
+//     // run auth filter before all methods on this controller except index and show
+//     $this->beforeFilter('auth', array('except' => array('index', 'show')));
+//}
+
 	public function index()
 	{
 		$users = User::all();
@@ -34,14 +44,17 @@ class UsersController extends \BaseController {
 	{
 		$user = new User();
 
-		$user->name = Input::get('name');
+		$user->first_name = Input::get('first_name');
+		$user->last_name = Input::get('last_name');
 		$user->password = Input::get('password');
 		$user->email = Input::get('email');
 		$user->title = "";
 		$user->about_me = "";
 		$user->save();
 
-		return Redirect::action('UsersController@show', $user->id);
+		Auth::login($user);
+
+		return Redirect::action('UsersController@edit', $user->id);
 	}
 
 
@@ -93,8 +106,8 @@ class UsersController extends \BaseController {
 		else
 		{
 
-			$user->name = Input::get('name');
-			$user->password = Input::get('password');
+			$user->first_name = Input::get('first_name');
+			$user->last_name = Input::get('last_name');
 			$user->title = Input::get('title');
 			$user->mediums = Input::get('mediums');
 			$user->about_me = Input::get('about_me');
@@ -103,13 +116,13 @@ class UsersController extends \BaseController {
 			// checking for valid image
 	        if(Input::hasFile('image') && Input::file('image')->isValid())
 	        {
-	            $user->addUploadedImage(Input::file('image'));
+	            $user->img_path = $user->makeThumbnails('img-upload',Input::file('image'), $user->id);
 	            $user->save();
 	        }
 
 	        Session::flash('successMessage', 'Action successful!');
 
-			return Redirect::action('UsersController@show', $user->id);
+			return View::make('profile')->with('user', $user);
 		}
 	}
 
