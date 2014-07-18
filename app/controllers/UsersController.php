@@ -8,14 +8,14 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 
-	public function __construct()
-{
-    // call base controller constructor
-    parent::__construct();
+// 	public function __construct()
+// {
+//     // call base controller constructor
+//     parent::__construct();
 
-    // run auth filter before all methods on this controller except index and show
-    $this->beforeFilter('auth', array('except' => array('index', 'show')));
-}
+//     // run auth filter before all methods on this controller except index and show
+//     $this->beforeFilter('auth', array('except' => array('index', 'show')));
+//}
 
 	public function index()
 	{
@@ -122,7 +122,7 @@ class UsersController extends \BaseController {
 
 	        Session::flash('successMessage', 'Action successful!');
 
-			return Redirect::action('UsersController@show', $user->id);
+			return View::make('profile')->with('user', $user);
 		}
 	}
 
