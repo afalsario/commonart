@@ -6,10 +6,6 @@
 
 <h2>This is the artist Profile page.</h2>
 
-@if(!Auth::check())
-not logged in
-@endif
-
 <br>
 
 <hr>

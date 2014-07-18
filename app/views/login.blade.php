@@ -9,7 +9,7 @@
 			  <label for="email">Email address</label>
 			  <tr><input name="email" type="text" class="form-control" placeholder="Email" value"{{{ Input::old('user->email')}}}"></input></tr>
 
-			  <label for="password">Password</label>	
+			  <label for="password">Password</label>
 			  <tr><input name="password" type="password" class="form-control" placeholder="Password" required></input></tr>
 
 			  <tr><button type="submit" class="btn btn-lg btn-success">Login</button></tr>
