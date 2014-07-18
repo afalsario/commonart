@@ -430,8 +430,10 @@ a:focus {
 	margin-bottom: 0;
 	border: none;
 	border-radius: 0;
+
 }
-.projects-thumbnail img{	
+.projects-thumbnail img{
+
 	-webkit-transition: all .4s ease-in-out;
 	-moz-transition: all .4s ease-in-out;
 	-ms-transition: all .4s ease-in-out;
