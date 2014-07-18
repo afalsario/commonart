@@ -22,7 +22,8 @@ class UserTableSeeder extends Seeder {
         DB::table('users')->delete();
 
         $user = new User();
-        $user->name = 'Admin';
+        $user->first_name = 'Admin';
+        $user->last_name = 'Codeup';
         $user->email = 'admin1@codeup.com';
         $user->password = 'password';
         $user->isAdmin = true;

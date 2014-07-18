@@ -17,7 +17,11 @@
 
 {{ Form::label('Name')}}
 <br>
-{{ Form::text('name') }}
+{{ Form::text('first_name') }}
+<br>
+{{ Form::label('Last')}}
+<br>
+{{ Form::text('last_name') }}
 <br>
 {{ Form::label('Title') }}
 <br>

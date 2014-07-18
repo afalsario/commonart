@@ -44,7 +44,8 @@ class UsersController extends \BaseController {
 	{
 		$user = new User();
 
-		$user->name = Input::get('name');
+		$user->first_name = Input::get('first_name');
+		$user->last_name = Input::get('last_name');
 		$user->password = Input::get('password');
 		$user->email = Input::get('email');
 		$user->title = "";
@@ -105,8 +106,8 @@ class UsersController extends \BaseController {
 		else
 		{
 
-			$user->name = Input::get('name');
-			$user->password = Input::get('password');
+			$user->first_name = Input::get('first_name');
+			$user->last_name = Input::get('last_name');
 			$user->title = Input::get('title');
 			$user->mediums = Input::get('mediums');
 			$user->about_me = Input::get('about_me');
