@@ -14,6 +14,7 @@
     <!-- Add custom CSS here -->
     <link href="/sb-admin/css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="/sb-admin/font-awesome/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
 
   <body>
@@ -83,14 +84,17 @@
                 </thead>
                 <tbody>
 @foreach($users as $user)
-                  <tr>
+                <tr>
                     <td>{{{ $user->id }}}</td>
                     <td>{{{ $user->first_name }}}</td>
                     <td>{{{ $user->last_name }}}</td>
                     <td>{{{ $user->email }}}</td>
                     <td><input type="checkbox" name="admin"></td>
-                    <td></td>
-                  </tr>
+                    <td><a href="{{ action('UsersController@show', $user->id) }}" class="btn btn-md btn-primary">Edit</a></td>
+                    <td><a href="#" class="deleteUser btn btn-md btn-primary" data-userid="{{ $user->id }}">Delete</a></td>
+                    {{ Form::open(array('action' => 'UsersController@destroy', 'id' => 'deleteForm', 'method' => 'DELETE')) }}
+                    {{ Form::close() }}
+                </tr>
  @endforeach
                 </tbody>
               </table>
@@ -98,12 +102,22 @@
           </div>
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+<!--     // <script src="js/jquery-1.10.2.js"></script>
+    // <script src="js/bootstrap.js"></script>
 
-    <!-- Page Specific Plugins -->
-    <script src="js/tablesorter/jquery.tablesorter.js"></script>
-    <script src="js/tablesorter/tables.js"></script>
+    // Page Specific Plugins
+    // <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    // <script src="js/tablesorter/tables.js"></script> -->
+
+    <script type="text/javascript">
+       $(".deleteUser").click(function() {
+           var userId = $(this).data('userid');
+           $("#deleteForm").attr('action', '/profiles/' + userId);
+           if(confirm("Are you sure you want to delete this user?")) {
+               $('#deleteForm').submit();
+           }
+       });
+    </script>
 
   </body>
 </html>
