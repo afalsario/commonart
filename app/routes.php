@@ -23,6 +23,8 @@ Route::get('/post', 'HomeController@showPost');
 
 Route::resource('profiles', 'UsersController');
 
+Route::get('/about', 'HomeController@showAbout');
+
 Route::resource('gallery', 'ImageController');
 
 Route::get('test', function () {

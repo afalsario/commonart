@@ -33,7 +33,7 @@ class HomeController extends BaseController {
 		if (Auth::attempt(array('email' => $email, 'password' => $password)))
 		{
 			Session::flash('infoMessage', 'You are now logged in!');
-			return Redirect::intended();
+			return Redirect::intended('/');
 		}
 		else
 		{
@@ -52,5 +52,10 @@ class HomeController extends BaseController {
 	public function showProfile()
 	{
 		return View::make('profile');
+	}
+
+	public function showAbout()
+	{
+		return View::make('about');
 	}
 }

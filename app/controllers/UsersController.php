@@ -7,6 +7,16 @@ class UsersController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
+	public function __construct()
+{
+    // call base controller constructor
+    parent::__construct();
+
+    // run auth filter before all methods on this controller except index and show
+    $this->beforeFilter('auth', array('except' => array('index', 'show')));
+}
+
 	public function index()
 	{
 		$users = User::all();
@@ -41,7 +51,9 @@ class UsersController extends \BaseController {
 		$user->about_me = "";
 		$user->save();
 
-		return Redirect::action('UsersController@show', $user->id);
+		Auth::login($user);
+
+		return Redirect::action('UsersController@edit', $user->id);
 	}
 
 
@@ -100,12 +112,13 @@ class UsersController extends \BaseController {
 			$user->about_me = Input::get('about_me');
 			$user->save();
 
-			// handle image manipulation
-			if (Input::hasFile('image') && Input::file('image')->isValid())
-			{
-				$user->img_path = Image::addUploadedImage(Input::file('image'), 'img-upload');
-				$user->save();
-			}
+
+			// checking for valid image
+	        if(Input::hasFile('image') && Input::file('image')->isValid())
+	        {
+	            $user->img_path = $user->makeThumbnails('img-upload',Input::file('image'), $user->id);
+	            $user->save();
+	        }
 
 	        Session::flash('successMessage', 'Action successful!');
 
