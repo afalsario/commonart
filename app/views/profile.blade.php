@@ -2,6 +2,7 @@
 
 
 @section('content')
+<div class="container">
 
 <h2>This is the artist Profile page.</h2>
 
@@ -10,12 +11,6 @@ not logged in
 @endif
 
 <br>
-
-@if (Auth::check())
-  <a href="{{ action('HomeController@logout')}}">Logout</a>
-@else
-  <a href="{{ action('HomeController@doLogin')}}">Login</a>
-@endif
 
 <hr>
 <br>
@@ -48,5 +43,5 @@ not logged in
 @if (Auth::check() && (Auth::user()->id == $user->id))
 <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
 @endif
-
+</div>
 @stop
