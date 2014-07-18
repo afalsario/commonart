@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <title>HOUSE - Interior Design Responsive Template</title>
+        <title>COMMON ART SA</title>
 
         <!-- Meta Tags -->
         <meta charset="utf-8">
