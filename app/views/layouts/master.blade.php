@@ -100,7 +100,7 @@
                 <div class="row"> 
                     <!-- Copyright -->                                    
                     <div class="col-md-4 text-center">
-                        <p>Copyright 2014 © Wrapbootstrap.com</p>
+                        <p>Copyright 2014 © CommonArtSA.com</p>
                     </div>
                     <!-- Footer Social Icons -->
                     <div class="col-md-4 text-center">

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-
+<div class="container">
 <h2>Edit Profile</h2>
 
 {{ Form::model($user, array('action' => array('UsersController@update', $user->id), 'files' => true, 'method' => 'PUT')) }}
@@ -14,7 +14,6 @@
 
 {{ Form::file('image') }}
 <br>
-
 {{ Form::label('Name')}}
 <br>
 {{ Form::text('name') }}
@@ -33,6 +32,9 @@
 <br>
 {{ Form::submit('Submit') }}
 {{ Form::close() }}
+</div>
+
 @stop
+
 
 
