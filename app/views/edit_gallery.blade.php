@@ -19,7 +19,7 @@
 <br>
 {{ Form::label('Price')}}
 <br>
-{{ Form::text('price')}}
+${{ Form::text('price')}}
 <br>
 {{ Form::label('Description')}}
 <br>
