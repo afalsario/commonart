@@ -50,9 +50,9 @@ class Image extends Eloquent{
             $new_image = imagecreatetruecolor($newWidth, $newHeight);
             imagecopyresized($new_image, $old_image, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-            $imgt($new_image, $updir."/".$id."_profile.jpg");
+            $imgt($new_image, $updir."/".$img->getClientOriginalName());
 
-            return "/".$updir."/".$id."_profile.jpg";
+            return "/".$updir."/".$img->getClientOriginalName();
         }
     }
 
