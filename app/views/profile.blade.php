@@ -6,10 +6,6 @@
 
 <h2>This is the artist Profile page.</h2>
 
-@if(!Auth::check())
-not logged in
-@endif
-
 <br>
 
 <hr>
@@ -35,9 +31,9 @@ not logged in
 
 @foreach($user->image as $image)
 <img src="{{{ $image->img_path }}}" class="img-responsive">
-{{{ $image->img_title }}}
-{{{ $image->price }}}
-{{{ $image->img_desc }}}
+<h3>{{{ $image->img_title }}}</h3>
+<h4>${{{ $image->price }}}</h4>
+<h5>{{{ $image->img_desc }}}</h5>
 @endforeach
 
 @if (Auth::check() && (Auth::user()->id == $user->id))
