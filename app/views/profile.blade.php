@@ -22,8 +22,11 @@ not logged in
 @if ($user->img_path)
     <img src="{{{ $user->img_path }}}" class="img-responsive">
 @endif
-<label>Name: </label>
-{{{ $user->name }}}
+<label>First Name: </label>
+{{{ $user->first_name }}}
+<br>
+<label>Last Name: </label>
+{{{ $user->last_name }}}
 <br>
 <label>Title: </label>
 {{{ $user->title }}}
