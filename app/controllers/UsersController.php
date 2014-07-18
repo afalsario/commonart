@@ -39,10 +39,6 @@ class UsersController extends \BaseController {
 		$user->email = Input::get('email');
 		$user->title = "";
 		$user->about_me = "";
-
-		// handle image manipulation
-		$user->profile_image = User::uploadProfileImage();
-
 		$user->save();
 
 		return Redirect::action('UsersController@show', $user->id);
@@ -104,12 +100,12 @@ class UsersController extends \BaseController {
 			$user->about_me = Input::get('about_me');
 			$user->save();
 
-			// checking for valid image
-	        if(Input::hasFile('image') && Input::file('image')->isValid())
-	        {
-	            $user->addUploadedImage(Input::file('image'));
-	            $user->save();
-	        }
+			// handle image manipulation
+			if (Input::hasFile('image') && Input::file('image')->isValid())
+			{
+				$user->img_path = Image::addUploadedImage(Input::file('image'), 'img-upload');
+				$user->save();
+			}
 
 	        Session::flash('successMessage', 'Action successful!');
 

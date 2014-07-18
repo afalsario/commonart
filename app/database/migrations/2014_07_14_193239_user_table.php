@@ -23,7 +23,7 @@ class UserTable extends Migration {
 			$table->string('title', 100)->nullable();
 			$table->string('mediums', 100);
 			$table->text('about_me', 1000);
-			$table->rememberToken();
+			$table->string('remember_token', 100)->nullable();
 			$table->timestamps();
 		});
 	}
