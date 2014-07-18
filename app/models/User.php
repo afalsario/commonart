@@ -56,58 +56,51 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $imageName = $this->id . '-' . $image->getClientOriginalName();
         $image->move($systemPath, $imageName);
         $this->img_path = '/' . $this->imgDir . '/' . $imageName;
+    }
 
-        $fileName = $imageName->getRealPath();
+    function makeThumbnails($updir, $img, $id,$MaxWe=300,$MaxHe=300)
+    {
+        $arr_image_details = getimagesize($img); 
+        $width = $arr_image_details[0];
+        $height = $arr_image_details[1];
 
-        $maxHeight = 200;
-        $maxWidth = 200;
+        $percent = 100;
+        if($width > $MaxWe) $percent = floor(($MaxWe * 100) / $width);
 
-        $newHeight = 0;
-        $newWidth = 0;
+        if(floor(($height * $percent)/100)>$MaxHe)  
+        $percent = (($MaxHe * 100) / $height);
 
-        // $inputFile = public_path() . '/uploads/ct.jpg';
-        // $outputFile = public_path() . '/uploads/ct-small.jpg';
-
-        // load the image to be manipulated
-        $image = new Imagick($fileName);
-
-        // get the current image dimensions
-        $currentWidth = $image->getImageWidth(); 
-        $currentHeight = $image->getImageHeight();
-
-        // determine what the new height and width should be based on the type of photo
-        if ($currentWidth > $currentHeight)
-        {
-            // landscape photo
-            // width should be resized to max and height should be resized proportionally
-            $newWidth = $maxWidth;
-            $newHeight = ceil($currentHeight * ($newWidth / $currentWidth));
-        }
-        else if ($currentHeight > $currentWidth)
-        {
-            // portrait photo
-            // height should be resized to max and width should be resized proportionally
-            $newHeight = $maxHeight;
-            $newWidth = ceil($currentWidth * ($newHeight / $currentHeight));
-        }
-        else
-        {
-            // square photo
-            // resize image to max dimensions
-            $newHeight = $newWidth = $maxHeight;
+        if($width > $height) {
+            $newWidth=$MaxWe;
+            $newHeight=round(($height*$percent)/100);
+        }else{
+            $newWidth=round(($width*$percent)/100);
+            $newHeight=$MaxHe;
         }
 
-        // perform the image resize
-        $image->resizeImage($newWidth, $newHeight, Imagick::FILTER_LANCZOS, true);  
+        if ($arr_image_details[2] == 1) {
+            $imgt = "ImageGIF";
+            $imgcreatefrom = "ImageCreateFromGIF";
+        }
+        if ($arr_image_details[2] == 2) {
+            $imgt = "ImageJPEG";
+            $imgcreatefrom = "ImageCreateFromJPEG";
+        }
+        if ($arr_image_details[2] == 3) {
+            $imgt = "ImagePNG";
+            $imgcreatefrom = "ImageCreateFromPNG";
+        }
 
-        // write out the new image
-        $image->writeImage($systemPath);
 
-        // clear memory resources
-        $image->clear(); 
-        $image->destroy();
+        if ($imgt) {
+            $old_image = $imgcreatefrom($img);
+            $new_image = imagecreatetruecolor($newWidth, $newHeight);
+            imagecopyresized($new_image, $old_image, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-        return 'Done';
+            $imgt($new_image, $updir."/".$id."_profile.jpg");
+
+            return "/".$updir."/".$id."_profile.jpg";
+        }
     }
 
     public function aboutSnippit()
