@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">   
         <!-- Css Theme -->           
         <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/ca_style.css">
         <!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset;=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/assets/fonts/montserrat/style.css">
@@ -59,14 +60,9 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">                        
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
-                                <li><a href="{{action('HomeController@showAbout')}}">About</a></li>
+                                
                                 <li><a href="services.html">Services</a></li>
-                                @if (Auth::check())   
-                                <li><a href="{{ action('HomeController@logout')}}">Logout</a></li>
-                                @else
-                                <li><a href="{{ action('HomeController@doLogin')}}">Login</a></li>
-                                @endif
-
+                               
                                 <!-- Dropdown -->
                                 <li class="dropdown">
                                     <a href="projects.html" class="dropdown-toggle" data-toggle="dropdown">Artists</a>
@@ -84,7 +80,24 @@
                                         <li><a href="blog.html">Gallery Blog</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+
+                                 @if(Auth::check()) 
+                                     
+                                            <li class="dropdown">
+                                                <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">{{{ Auth::user()->first_name }}}</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="{{action('UsersController@show', array(Auth::user()->id))}}">My Art Space </a></li>
+                                                    <li><a href="{{ action('ImageController@index', array(Auth::user()->id))}}">My Shop</a></li>
+                                                    <li><a href="{{ action('ImageController@create', array(Auth::user()->id))}}">New Post</a></li>
+                                                    <li><a href="{{ action('HomeController@logout')}}">Logout</a></li>
+                                                </ul>
+                                            </li>
+
+                                            @else
+                                            <li><a href="{{ action('HomeController@doLogin')}}">Login</a></li>
+                                    
+                                @endif
+                                
                             </ul>
                         </div>
                     </div>
@@ -110,12 +123,8 @@
                     </div>
                     <!-- Footer Social Icons -->
                     <div class="col-md-4 text-center">
-                        <a href="#">
-                            <i class="fa fa-facebook fa-lg"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-twitter fa-lg"></i>
-                        </a>
+                        <a href="{{action('HomeController@showAbout')}}"> About </a>
+                        <a href="#"> Contact </a>
                         <a href="#">
                             <i class="fa fa-pinterest-square fa-lg"></i>
                         </a>
