@@ -431,6 +431,10 @@ a:focus {
 	border: none;
 	border-radius: 0;
 
+	background-color: #00F;
+	width: 100%;
+	height: 270px;
+
 }
 .projects-thumbnail img{
 
@@ -462,12 +466,11 @@ a:focus {
 }
 .gallery-inner li {
 	list-style: none;
-	float: left;
-	width: 50%;
+	width: 100%;
 	text-align: center;
 }
 .gallery-inner img {
-	display: block;
+	
 	max-width: 100%;
 	border: 1px solid #fff;
 }
