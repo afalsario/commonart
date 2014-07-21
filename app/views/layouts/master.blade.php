@@ -28,7 +28,6 @@
       @yield('topscript')
     </head>
     <body>
-
         @if (Session::has('successMessage'))
             <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
         @endif
@@ -48,6 +47,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
+
                             <a class="navbar-brand" href="{{ action('HomeController@showHomepage')}}">
                                 <!-- Logo Image -->
                                 <!-- <img src="/assets/img/logo-header.png" alt="Specifie an alternate text for an image"> -->
@@ -98,6 +98,9 @@
                                             <li class="dropdown">
                                                 <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">{{{ Auth::user()->first_name }}}</a>
                                                 <ul class="dropdown-menu" role="menu">
+                                                    @if(Auth::user()->isAdmin == true)
+                                                   <li><a href="{{action('AdminController@index')}}">Dashboard</a></li>
+                                                   @endif
                                                     <li><a href="{{action('UsersController@show', array(Auth::user()->id))}}">My Art Space </a></li>
                                                     <li><a href="{{ action('ImageController@index', array(Auth::user()->id))}}">My Shop</a></li>
                                                     <li><a href="{{ action('ImageController@create', array(Auth::user()->id))}}">New Post</a></li>
