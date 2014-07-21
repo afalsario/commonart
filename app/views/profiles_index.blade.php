@@ -9,7 +9,7 @@
 </div>
     <!-- Site Wrapper -->
 <div class="site-wrapper">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             @foreach($users as $user)
             <!-- Artists -->
