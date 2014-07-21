@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
         <!-- Css Implementing Plugins -->
         <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/assets/plugins/lightbox/css/lightbox.css">  
+        <link rel="stylesheet" href="/assets/plugins/lightbox/css/lightbox.css">
         <!-- Css Theme -->
         <link rel="stylesheet" href="/assets/css/style.css">
         <!-- Web Fonts -->
@@ -73,13 +73,13 @@
 
                                 <li><a href="services.html">Services</a></li>
                                 <li><a href="{{ action('UsersController@index')}}">Artists</a></li>
-                               
+
 
                                 <!-- Dropdown -->
                                <!--  <li class="dropdown">
                                     <a href="projects.html" class="dropdown-toggle" data-toggle="dropdown">Artists</a>
                                     <ul class="dropdown-menu" role="menu">
-                                        All artists was here 
+                                        All artists was here
                                         <li><a href="projects.html">Gallery Style</a></li>
                                     </ul>
                                 </li> -->
