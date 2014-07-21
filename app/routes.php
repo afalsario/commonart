@@ -29,14 +29,9 @@ Route::resource('gallery', 'ImageController');
 
 Route::resource('admin', 'AdminController');
 
-Route::get('edit', function(){
+Route::get('upload', function(){
     return View::make('photo_edit');
 });
-
-Route::post('edit', 'HomeController@post_upload');
-
-Route::get('gallery', 'HomeController@index');
-
 
 
 
