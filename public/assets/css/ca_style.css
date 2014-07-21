@@ -3,11 +3,16 @@
 .projects-thumbnail img{
 
 	display:block;
-	width: 100%;
+	
 	height: auto;
 
 }
 
 .profile-img {
 	text-align: center;
+}
+
+.project-inner img {
+	display: block;
+	margin: auto;	
 }

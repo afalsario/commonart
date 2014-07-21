@@ -12,9 +12,8 @@
 
 <!-- Site Wrapper -->
 <div class="site-wrapper">
-
     <!-- Project Inner -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <!-- Project Image Gallery (for more images in your gallery, image width can be changed in styles.css class gallery-inner) -->
@@ -34,7 +33,7 @@
                     <ul>
                         <!-- Artist -->
                         <li>
-                            <b>Artist:</b> {{{$user->first_name . $user->last_name}}}
+                            <b>Artist:</b> {{{$user->first_name . " " . $user->last_name}}}
                         </li>
 
                         <!-- Title -->
@@ -71,41 +70,35 @@
             <div class="row">        
                 @foreach($user->image as $image)
                     <!-- Project Item (image,link and description for your project) -->
-                    <div class="col-xs-6 col-md-4">
-                        <div class="gallery-inner">
-                            <a href="{{{$image->img_path}}}" data-lightbox="example-set">   
+                    <div class="col-xs-6 col-md-4 project-item">
+                        <div class="thumbnail projects-thumbnail">
+                            <a href="{{{$image->img_path}}}"  alt="Make this a link to show page for item">   
                                 <!-- Image -->                 
-                                <img src="{{{ $image->img_path }}}" >                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>
-                                        <h3>{{{ $image->img_title }}}</h3>
-                                        <p><small>{{{ $image->price }}}</small></p>
-                                    </div>
-                                </div>
-                            </a>
+                             <img src="{{{ $image->img_path }}}" > 
+                           	</a>
+                        </div>                   
+                        <div class="project-inner-caption">
+                            <!-- Title and Date -->
+                            <div class="project-title">
+                                <a href="{{ action('ImageController@show', array($image->id)) }}"><h3>{{{ $image->img_title }}}</h3></a>
+                            </div>
+                                <p>Price:${{{ $image->price }}}</p>
                         </div>
                     </div>
-                @endforeach 
-            </div><!-- /row -->
-        </div><!-- /container -->
-                <!-- View All Projects Button -->
-                <div class="padding-top padding-bottom text-center">  
-                    <a href="{{ action('ImageController@index')}}" class="btn black-btn">View all Items</a>
-                </div>
-
-            </section>
+            	@endforeach 
+                </div> <!-- Row -->
+        </div><!-- container -->
+</section>
             <!-- End Related Projects -->
 
 
-@foreach($user->image as $image)
+<!-- @foreach($user->image as $image)
 <img src="{{{ $image->img_path }}}" class="img-responsive">
 <h3>{{{ $image->img_title }}}</h3>
 <h4>${{{ $image->price }}}</h4>
 <h5>{{{ $image->img_desc }}}</h5>
 @endforeach
-
+ -->
 @if (Auth::check() && (Auth::user()->id == $user->id))
 <a href="{{ action('ImageController@create')}}"> Create Post </a>
 <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
