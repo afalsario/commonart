@@ -14,7 +14,7 @@
                 <!-- Slider Item (image, link and description for your project in slider) -->        
                 <div class="item active"> 
                     <!-- Image -->           
-                    <img src="/assets/img/slider-images/image1.jpg" alt="Specifie an alternate text for an image">      
+                    <img src="/assets/img/slider-images/image3.jpg" alt="Specifie an alternate text for an image">      
                     <!-- Description -->      
                     <div class="carousel-caption header-carousel-caption">
                         <h1>Welcome To CommonArt</h1>
