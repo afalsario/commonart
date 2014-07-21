@@ -12,7 +12,7 @@
 	    <h2 class="subtitle">Add New Image</h2>
 	    {{ Form::open(array('action' => 'ImageController@store', 'files' => true)) }}
 	@endif
-	
+
 	{{ Form::file('image') }}
 	<br>
 	{{ Form::label('Title')}}

@@ -2,8 +2,8 @@
 
 @section('content')
 
-<!-- Section General Title -->        
-<div class="general-title bg-color"> 
+<!-- Section General Title -->
+<div class="general-title bg-color">
     <h2>Artists</h2>
     <div class="title-devider"></div>
 </div>
@@ -18,21 +18,21 @@
                         <div class="thumbnail projects-thumbnail">
                             <a href="{{action('UsersController@show', array($user->id))}}">
                                 <!-- Image -->
-                                @if(isset($user->img_path)) 
-                                <img src="{{{$user->img_path}}}" alt="Profile Image">   
+                                @if(isset($user->img_path))
+                                <img src="{{{$user->img_path}}}" alt="Profile Image">
                                 @else
-                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image"> 
-                                @endif                                                                
-                            </a>         
+                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image">
+                                @endif
+                            </a>
                         </div>
                         <div class="project-inner-caption">
                             <!-- Username -->
-                            <div class="project-title">                    
-                                <a href="{{ action('UsersController@show', array($user->id)) }}"><h3>{{{$user->name}}}</h3></a>                
+                            <div class="project-title">
+                                <a href="{{ action('UsersController@show', array($user->id)) }}"><h3>{{{$user->name}}}</h3></a>
                             </div>
                             <!-- Title and Mediums -->
-                            <p>Title: {{{$user->title}}}</p>    
-                            <p>Mediums: {{{$user->mediums}}}</p>             
+                            <p>Title: {{{$user->title}}}</p>
+                            <p>Mediums: {{{$user->mediums}}}</p>
                         </div>
                     </div>
         @endforeach
@@ -48,8 +48,8 @@
                         <li><a href="#">»</a></li>
                     </ul>
                 </div>
-        </div><!-- /row -->   
-       
+        </div><!-- /row -->
+
         <!-- End Projects -->
     </div>
     <!-- /site-wrapper -->
