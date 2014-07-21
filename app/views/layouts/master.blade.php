@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <title>HOUSE - Interior Design Responsive Template</title>
+        <title>COMMON ART SA</title>
 
         <!-- Meta Tags -->
         <meta charset="utf-8">
@@ -16,10 +16,10 @@
         <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
 
         <!-- Css Global Compulsory -->
-        <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
         <!-- Css Implementing Plugins -->
-        <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">   
-        <!-- Css Theme -->           
+        <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+        <!-- Css Theme -->
         <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="/assets/css/ca_style.css">
         <!-- Web Fonts -->
@@ -50,7 +50,8 @@
                             </button>
                             <a class="navbar-brand" href="{{ action('HomeController@showHomepage')}}">
                                 <!-- Logo Image -->
-                                <img src="/assets/img/logo-header.png" alt="Specifie an alternate text for an image">
+                                <!-- <img src="/assets/img/logo-header.png" alt="Specifie an alternate text for an image"> -->
+                                <h1>COMMON ART SA</h1>
                             </a>
                         </div>
                     </div>
@@ -58,11 +59,11 @@
                     <div class="col-md-8">
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">                        
+                            <ul class="nav navbar-nav navbar-right">
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
                                 
                                 <li><a href="services.html">Services</a></li>
-                               
+
                                 <!-- Dropdown -->
                                 <li class="dropdown">
                                     <a href="projects.html" class="dropdown-toggle" data-toggle="dropdown">Artists</a>
@@ -115,9 +116,9 @@
 
         <!-- Footer -->
         <div id="footer">
-            <div class="container">   
-                <div class="row"> 
-                    <!-- Copyright -->                                    
+            <div class="container">
+                <div class="row">
+                    <!-- Copyright -->
                     <div class="col-md-4 text-center">
                         <p>Copyright 2014 © CommonArtSA.com</p>
                     </div>
@@ -134,14 +135,13 @@
                         <a href="#">
                             <i class="fa fa-behance fa-lg"></i>
                         </a>
-                    </div> 
-                    
+                    </div>
                     <!-- Up Button -->
                     <div class="col-md-4 back-to-top">
                         <a href="#">
                             <i class="fa fa-angle-up fa-2x pull-right"></i>
                         </a>
-                    </div>                                                                                                                                                 
+                    </div>
                 </div><!-- /row -->
             </div><!-- /container -->
         </div>

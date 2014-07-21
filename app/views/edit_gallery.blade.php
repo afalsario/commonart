@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="container">
 	@if (isset($image))
 	    <h2 class="subtitle">Edit Image</h2>

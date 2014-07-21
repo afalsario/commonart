@@ -50,6 +50,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'about_me' => 'max:1000'
     ];
 
+
     public function addUpLoadedImage($image)
     {
         $systemPath = public_path() . '/' . $this->imgDir . '/';

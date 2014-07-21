@@ -73,7 +73,7 @@
                     <!-- Project Item (image,link and description for your project) -->
                     <div class="col-xs-6 col-md-4">
                         <div class="gallery-inner">
-                            <a href="{{{$user->img_path}}}" data-lightbox="example-set">   
+                            <a href="{{{$image->img_path}}}" data-lightbox="example-set">   
                                 <!-- Image -->                 
                                 <img src="{{{ $image->img_path }}}" >                    
                                 <div class="project-caption">
@@ -99,12 +99,11 @@
             <!-- End Related Projects -->
 
 
-
 @foreach($user->image as $image)
 <img src="{{{ $image->img_path }}}" class="img-responsive">
-{{{ $image->img_title }}}
-{{{ $image->price }}}
-{{{ $image->img_desc }}}
+<h3>{{{ $image->img_title }}}</h3>
+<h4>${{{ $image->price }}}</h4>
+<h5>{{{ $image->img_desc }}}</h5>
 @endforeach
 
 @if (Auth::check() && (Auth::user()->id == $user->id))
