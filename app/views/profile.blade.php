@@ -91,14 +91,6 @@
 </section>
             <!-- End Related Projects -->
 
-
-<!-- @foreach($user->image as $image)
-<img src="{{{ $image->img_path }}}" class="img-responsive">
-<h3>{{{ $image->img_title }}}</h3>
-<h4>${{{ $image->price }}}</h4>
-<h5>{{{ $image->img_desc }}}</h5>
-@endforeach
- -->
 @if (Auth::check() && (Auth::user()->id == $user->id))
 <a href="{{ action('ImageController@create')}}"> Create Post </a>
 <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>

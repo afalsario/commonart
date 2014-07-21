@@ -28,6 +28,11 @@
 
 			<tr>{{ $errors->first('last_name', '<span class="help-block">:message</span></br>') }}</tr>
 
+			<label for="username">Username</label>
+			<tr><input name="username" type="text" class="form-control" placeholder="Username..." value"{{{ Input::old('user->username')}}}"></input></tr>
+
+			<tr>{{ $errors->first('username', '<span class="help-block">:message</span></br>') }}</tr>
+
 			  <label for="email">Email address</label>
 			  <tr><input name="email" type="text" class="form-control" placeholder="Email" value"{{{ Input::old('user->email')}}}"></input></tr>
 						<tr>{{ $errors->first('email', '<span class="help-block">:message</span></br>') }}</tr>
