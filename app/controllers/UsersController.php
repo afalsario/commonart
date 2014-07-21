@@ -46,6 +46,7 @@ class UsersController extends \BaseController {
 
 		$user->first_name = Input::get('first_name');
 		$user->last_name = Input::get('last_name');
+		$user->username = Input::get('username');
 		$user->password = Input::get('password');
 		$user->email = Input::get('email');
 		$user->title = "";
@@ -64,13 +65,13 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($username)
 	{
-		$user = User::with('image')->findOrFail($id);
+		$user = User::findByUsername($username);
 		return View::make('profile')->with('user', $user);
 	}
 
-
+// User::with('image')->
 	/**
 	 * Show the form for editing the specified resource.
 	 *

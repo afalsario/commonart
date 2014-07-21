@@ -16,23 +16,23 @@
                     <!-- Artist (image, title, and Medium of Artist)-->
                     <div class="col-sm-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
-                            <a href="{{action('UsersController@show', array($user->id))}}">
+                            <a href="{{action('UsersController@show', array($user->username))}}">
                                 <!-- Image -->
-                                @if(isset($user->img_path)) 
-                                <img src="{{{$user->img_path}}}" alt="Profile Image">   
+                                @if(isset($user->img_path))
+                                <img src="{{{$user->img_path}}}" alt="Profile Image">
                                 @else
-                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image"> 
-                                @endif                                                                
-                            </a>         
+                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image">
+                                @endif
+                            </a>
                         </div>
                         <div class="project-inner-caption">
                             <!-- Username -->
-                            <div class="project-title">                    
-                                <a href="{{ action('UsersController@show', array($user->id)) }}"><h3>{{{$user->name}}}</h3></a>                
+                            <div class="project-title">
+                                <a href="{{ action('UsersController@show', array($user->username)) }}"><h3>{{{$user->first_name }}}</h3></a>                
                             </div>
                             <!-- Title and Mediums -->
-                            <p>Title: {{{$user->title}}}</p>    
-                            <p>Mediums: {{{$user->mediums}}}</p>             
+                            <p>Title: {{{$user->title}}}</p>
+                            <p>Mediums: {{{$user->mediums}}}</p>
                         </div>
                     </div>
         @endforeach

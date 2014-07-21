@@ -50,10 +50,22 @@ class Image extends Eloquent{
             $new_image = imagecreatetruecolor($newWidth, $newHeight);
             imagecopyresized($new_image, $old_image, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-            $imgt($new_image, $updir."/".$img->getClientOriginalName());
+            $imgt($new_image, $updir."/". $id . "-" . $img->getClientOriginalName());
 
             return "/".$updir."/".$img->getClientOriginalName();
         }
+    }
+
+    public function post_upload($file, $id){
+
+        $destinationPath = 'gallery_pics';
+        // If the uploads fail due to file system, you can try doing public_path().'/uploads' 
+        // $filename = str_random(12);
+        $filename = $file->getClientOriginalName();
+        //$extension =$file->getClientOriginalExtension(); 
+        $upload_success = $file->move($destinationPath, $filename);
+
+        return $filename;
     }
 
 }

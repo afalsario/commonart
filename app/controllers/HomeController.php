@@ -46,7 +46,7 @@ class HomeController extends BaseController {
 	{
 		Auth::logout();
 		Session::flash('logoutMessage', "You are logged out! ");
-		return Redirect::back()->with('logoutMessage');
+		return View::make('login');
 	}
 
 	public function showProfile()
@@ -58,4 +58,11 @@ class HomeController extends BaseController {
 	{
 		return View::make('about');
 	}
+
 }
+
+
+
+
+
+
