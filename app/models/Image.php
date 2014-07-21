@@ -11,23 +11,23 @@ class Image extends Eloquent{
         return $this->belongsTo('User');
     }
 
-    function makeThumbnails($updir, $img, $id,$MaxWe=600,$MaxHe=600)
+    function makeThumbnails($updir, $img, $id,$MaxWe=450,$MaxHe=450)
     {
         $arr_image_details = getimagesize($img); 
         $width = $arr_image_details[0];
         $height = $arr_image_details[1];
 
-        $percent = 200;
-        if($width > $MaxWe) $percent = floor(($MaxWe * 200) / $width);
+        $percent = 100;
+        if($width > $MaxWe) $percent = floor(($MaxWe * 100) / $width);
 
-        if(floor(($height * $percent)/200)>$MaxHe)  
-        $percent = (($MaxHe * 200) / $height);
+        if(floor(($height * $percent)/100)>$MaxHe)  
+        $percent = (($MaxHe * 100) / $height);
 
         if($width > $height) {
             $newWidth=$MaxWe;
-            $newHeight=round(($height*$percent)/200);
+            $newHeight=round(($height*$percent)/100);
         }else{
-            $newWidth=round(($width*$percent)/200);
+            $newWidth=round(($width*$percent)/100);
             $newHeight=$MaxHe;
         }
 
