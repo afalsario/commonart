@@ -61,22 +61,24 @@
     <!-- Related Projects -->
     <section class="projects padding-top">
         <!-- Section General Title -->
-        <div class="general-title"> 
+        <div class="general-title">
             <h2>My Shop</h2>
             <div class="title-devider"></div>
         </div>
 
         <div class="container-fluid">
-            <div class="row">        
+            <div class="row">
                 @foreach($user->image as $image)
                     <!-- Project Item (image,link and description for your project) -->
                     <div class="col-xs-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
+
                             <a href="{{ action('ImageController@show', array($image->id)) }}" >   
                                 <!-- Image -->                 
                              <img src="{{{ $image->img_path }}}" > 
+
                            	</a>
-                        </div>                   
+                        </div>
                         <div class="project-inner-caption">
                             <!-- Title and Date -->
                             <div class="project-title">
@@ -130,20 +132,12 @@
                                @endif
                         </div>
                     </div>
-            	@endforeach 
+            	@endforeach
                 </div> <!-- Row -->
         </div><!-- container -->
 </section>
             <!-- End Related Projects -->
 
-
-<!-- @foreach($user->image as $image)
-<img src="{{{ $image->img_path }}}" class="img-responsive">
-<h3>{{{ $image->img_title }}}</h3>
-<h4>${{{ $image->price }}}</h4>
-<h5>{{{ $image->img_desc }}}</h5>
-@endforeach
- -->
 @if (Auth::check() && (Auth::user()->id == $user->id))
 <a href="{{ action('ImageController@create')}}"> Create Post </a>
 <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>

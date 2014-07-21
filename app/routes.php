@@ -29,3 +29,10 @@ Route::resource('gallery', 'ImageController');
 
 Route::resource('admin', 'AdminController');
 
+Route::get('upload', function(){
+    return View::make('photo_edit');
+});
+
+
+
+

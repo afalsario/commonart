@@ -5,9 +5,9 @@
 
 
 
-<img src="{{{ $image->img_path }}}" class="img-responsive">
 
-    <!-- Site Wrapper -->
+
+<!-- Site Wrapper -->
 <div class="site-wrapper">
     <div class="container">
         <div class="row">
@@ -16,22 +16,15 @@
                     <!-- Item Discription -->
                     <div class="col-sm-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
-                            <a href="{{action('ImageController@show', array($user->id))}}">
-                                <!-- Image -->
-                                @if(isset($user->img_path)) 
-                                <img src="{{{ $image->img_path }}}" alt="Profile Image">   
-                                @else
-                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image"> 
-                                @endif                                                                
-                            </a>         
-                        </div>
+                                <img src="{{{ $image->img_path }}}">
+                        </div
                         <div class="project-inner-caption">
                             <!-- Item Title  -->
-                            <div class="project-title">                    
-                                <h3>{{{ $image->img_title }}}</h3></a>                
+                            <div class="project-title">
+                                <h3>{{{ $image->img_title }}}</h3></a>
                             </div>
                             <!-- Title and Mediums -->
-                            <p>Price: {{{ $image->price }}}</p>            
+                            <p>Price: {{{ $image->price }}}</p>
                         </div>
                     </div>
         	@endforeach

@@ -117,4 +117,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     }
 
+    static public function findByUsername($username)
+    {
+        $user = self::where('username', $username)->first();
+        return ($user == null) ? App::abort(404) : $user;
+    }
 }

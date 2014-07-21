@@ -7,6 +7,7 @@ class ImageController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
 	public function index()
 	{
 		$images = Image::all();
@@ -32,7 +33,24 @@ class ImageController extends \BaseController {
 	 */
 	public function store()
 	{
-		return $this->update(null);
+		$image = new Image();
+		// return $this->update(null);
+		$file = Input::file('file');
+		$id = Auth::user()->id;
+		// If the uploads fail due to file system, you can try doing public_path().'/uploads' 
+		// $filename = str_random(12);
+		$filename = $id . "-" . $file->getClientOriginalName();
+		//$extension =$file->getClientOriginalExtension();
+		$new_images = $file->move(public_path('gallery_pics'), $filename);
+
+		$image->user_id = Auth::user()->id;
+		$image->img_path = "/gallery_pics" . "/" . $filename;
+		$image->img_title = "";
+		$image->price = "";
+		$image->img_desc = "";
+		$image->save();
+
+
 	}
 
 
@@ -89,7 +107,8 @@ class ImageController extends \BaseController {
 	            $image->img_path = $image->makeThumbnails('gallery_pics', Input::file('image'), $image->user_id);
 	            $image->save();
 	        }
-	    return Redirect::action('ImageController@show', $image->id);
+	    // return Redirect::action('ImageController@show', $image->id);
+	        return Redirect::action('ImageController@index');
 	}
 
 
