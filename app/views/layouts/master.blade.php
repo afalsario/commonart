@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
         <!-- Css Implementing Plugins -->
         <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/plugins/lightbox/css/lightbox.css">  
         <!-- Css Theme -->
         <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="/assets/css/ca_style.css">
@@ -63,24 +64,26 @@
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
                                 
                                 <li><a href="services.html">Services</a></li>
+                                <li><a href="{{ action('UsersController@index')}}">Artists</a></li>
+                               
 
                                 <!-- Dropdown -->
-                                <li class="dropdown">
+                               <!--  <li class="dropdown">
                                     <a href="projects.html" class="dropdown-toggle" data-toggle="dropdown">Artists</a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ action('UsersController@index')}}">All Artists</a></li>
+                                        All artists was here 
                                         <li><a href="projects.html">Gallery Style</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
 
                                 <!-- Dropdown -->
-                                <li class="dropdown">
+                               <!--  <li class="dropdown">
                                     <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="blog-inner.html">Single Blog</a></li>
                                         <li><a href="blog.html">Gallery Blog</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
 
                                  @if(Auth::check()) 
                                      
@@ -152,6 +155,7 @@
         <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <!-- Js Implementing Plugins  -->
         <script src="/assets/plugins/moderniz.js"></script>
+        <script src="/assets/plugins/lightbox/js/lightbox.js"></script>
         <!-- Js Theme  -->
         <script src="/assets/js/app.js"></script>
     </body>
