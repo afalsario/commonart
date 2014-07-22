@@ -6,17 +6,26 @@
 
 
 
-
-    <!-- Site Wrapper -->
+<!-- Site Wrapper -->
 <div class="site-wrapper">
     <div class="container">
         <div class="row">
             @foreach($images as $image)
-            <img src="{{{ $image->img_path }}}" class="img-responsive">
-            <h2>{{{ $image->img_title }}}</h2>
-            <h3>{{{ $image->img_desc }}}</h3>
-            <h5>${{{ $image->price }}}</h5>
-            <hr>
+            <!-- Items -->
+                    <!-- Item Discription -->
+                    <div class="col-sm-6 col-md-4 project-item">
+                        <div class="thumbnail projects-thumbnail">
+                                <img src="{{{ $image->img_path }}}">
+                        </div
+                        <div class="project-inner-caption">
+                            <!-- Item Title  -->
+                            <div class="project-title">
+                                <h3>{{{ $image->img_title }}}</h3></a>
+                            </div>
+                            <!-- Title and Mediums -->
+                            <p>Price: {{{ $image->price }}}</p>
+                        </div>
+                    </div>
         	@endforeach
                 <!-- Pagination -->
                 <div class="col-lg-12 text-center padding-bottom">
