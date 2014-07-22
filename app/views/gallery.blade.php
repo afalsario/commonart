@@ -5,6 +5,54 @@
 
 <!-- Site Wrapper -->
 <div class="site-wrapper">
+    <div>
+        <div id="filter-price" class="filter box">
+    <h4>
+        Price Filter
+            </h4>
+                                                    <div class="content">
+        <form id="input-price-range" class="common-form">
+            <div class="row">
+                <div class="cell">
+                    <div class="input-price">
+                        <span class="currency-symbol">$</span>
+                        <input
+                            type="tel" step="any"
+                            name="min"
+                            value=""
+                            placeholder="min"
+                            id="min" />
+                    </div>
+                </div>
+                <div class="cell">
+                    <span class="price-range-to">
+            
+                to
+            
+                    </span>
+                </div>
+                <div class="cell">
+                    <div class="input-price">
+                        <span class="currency-symbol">$</span>
+                        <input
+                            type="tel" step="any"
+                            placeholder="max"
+                            name="max"
+                            value=""
+                            id="max" />
+                    </div>
+                </div>
+                <div class="cell">
+                    <button class="btn btn-secondary" type="submit">
+                        <span class="ss-icon ss-directright"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    </div>
+
     <div class="container">
         <div class="row">
             @foreach($images as $image)
