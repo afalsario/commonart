@@ -95,12 +95,7 @@ class ImageController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$image = new Image();
-
-		 if($id != null)
-        {
             $image = Image::findOrFail($id);
-        }
 
 		$image->user_id = Auth::user()->id;
 
@@ -115,7 +110,7 @@ class ImageController extends \BaseController {
 	            $image->save();
 	        }
 	    // return Redirect::action('ImageController@show', $image->id);
-	        return Redirect::action('ImageController@index');
+	        return Redirect::back();
 	}
 
 
