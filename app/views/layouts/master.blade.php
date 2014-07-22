@@ -101,9 +101,9 @@
                                                     @if(Auth::user()->isAdmin == true)
                                                    <li><a href="{{action('AdminController@index')}}">Dashboard</a></li>
                                                    @endif
-                                                    <li><a href="{{action('UsersController@show', array(Auth::user()->id))}}">My Art Space </a></li>
+                                                    <li><a href="{{action('UsersController@show', array(Auth::user()->username))}}">My Art Space </a></li>
                                                     <li><a href="{{ action('ImageController@index', array(Auth::user()->id))}}">My Shop</a></li>
-                                                    <li><a href="{{ action('ImageController@create', array(Auth::user()->id))}}">New Post</a></li>
+                                                    <li><a href="{{ action('ImageController@create', array(Auth::user()->id))}}">Update Gallery</a></li>
                                                     <li><a href="{{ action('HomeController@logout')}}">Logout</a></li>
                                                 </ul>
                                             </li>

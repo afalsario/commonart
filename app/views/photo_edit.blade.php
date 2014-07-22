@@ -1,16 +1,6 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="ttw" content="dt7xvsr" />
+@extends('layouts.master')
 
-        <title>Dropzone.js</title>
-
-        <link rel="stylesheet" href="/dropzone/downloads/css/general.css">
-        <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+@section('topscript')
         <script src="/assets/plugins/jquery-1.11.1.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="/dropzone/downloads/dropzone.js"></script>
@@ -20,9 +10,8 @@
             display: none;
         }
         </style>
-
-    </head>
-    <body>
+@stop
+@section('content')
         {{ Form::open(array('action'=>'ImageController@store', 'class' => 'dropzone', 'id' => 'my-awesome-dropzone')) }}
         {{ Form::close() }}
   <div class="container" id="container">
@@ -89,11 +78,15 @@
             <i class="glyphicon glyphicon-trash"></i>
             <span>Delete</span>
           </button>
+          <br>
         </div>
+        <br>
       </div>
+      <br>
 
     </div>
-
+</div>
+<br>
     <script>
     // Get the template HTML and remove it from the doument
     var previewNode = document.querySelector("#template");
@@ -152,6 +145,4 @@
         document.querySelector("#my-awesome-dropzone").dropzone.removeAllFiles(true);
       };
     </script>
-
-</body>
-</html>
+@stop

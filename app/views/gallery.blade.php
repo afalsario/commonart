@@ -3,9 +3,6 @@
 
 @section('content')
 
-
-
-
 <!-- Site Wrapper -->
 <div class="site-wrapper">
     <div class="container">

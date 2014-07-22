@@ -73,9 +73,9 @@
                     <div class="col-xs-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
 
-                            <a href="{{ action('ImageController@show', array($image->id)) }}" >   
-                                <!-- Image -->                 
-                             <img src="{{{ $image->img_path }}}" > 
+                            <a href="{{ action('ImageController@show', array($image->id)) }}" >
+                                <!-- Image -->
+                             <img src="{{{ $image->img_path }}}" >
 
                            	</a>
                         </div>
@@ -85,7 +85,7 @@
                                 <a href="{{ action('ImageController@show', array($image->id)) }}"><h3>{{{ $image->img_title }}}</h3></a>
                             </div>
                                 <p>Price:${{{ $image->price }}}</p>
-                               
+
                                @if (Auth::check() && (Auth::user()->id == $user->id))
                                <!-- Button trigger modal -->
                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
