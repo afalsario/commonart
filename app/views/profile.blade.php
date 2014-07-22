@@ -18,12 +18,12 @@
 
             <!-- Project Image Gallery (for more images in your gallery, image width can be changed in styles.css class gallery-inner) -->
             <div class="col-md-4">
-            	<div class="profile-img">
-	                @if($user->img_path) 
-	                <img src="{{{$user->img_path}}}" alt="Specifie an alternate text for an image">
-	                @else
-	                <img src="/assets/img/portfolio/image1.jpg" alt="Profile Image"> 
-	                @endif 
+                <div class="profile-img">
+                    @if($user->img_path) 
+                    <img src="{{{$user->img_path}}}" alt="Specifie an alternate text for an image">
+                    @else
+                    <img src="/assets/img/portfolio/image1.jpg" alt="Profile Image"> 
+                    @endif 
                 </div>
             </div>
 
@@ -64,23 +64,21 @@
     <!-- Related Projects -->
     <section class="projects padding-top">
         <!-- Section General Title -->
-        <div class="general-title">
+        <div class="general-title"> 
             <h2>My Shop</h2>
             <div class="title-devider"></div>
         </div>
 
         <div class="container-fluid">
-            <div class="row">
+            <div class="row">        
                 @foreach($user->image as $image)
                     <!-- Project Item (image,link and description for your project) -->
                     <div class="col-xs-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
-
-                            <a href="{{ action('ImageController@show', array($image->id)) }}" >
+                            <a href="{{{$image->img_path}}}"  alt="Make this a link to show page for item">   
                                 <!-- Image -->
                              <img src="{{{ $image->img_path }}}" >
-
-                           	</a>
+                            </a>
                         </div>
                         <div class="project-inner-caption">
                             <!-- Title and Date -->
@@ -93,51 +91,79 @@
                             </div>
                                 <p>Price:${{{ $image->price }}}</p>
 
-                               @if (Auth::check() && (Auth::user()->id == $user->id))
-                               <!-- Button trigger modal -->
-                               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                 Edit
-                               </button>
+                                <!-- Button trigger modal -->
+@if (Auth::check() && (Auth::user()->id == $user->id))
+                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
+                                  Edit
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="{{'myModal-' . $image->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title" id="{{ 'myModalLabel-' . $image->id }}">{{{ $image->img_title }}}</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                            {{ Form::model($image, array('action' => array('ImageController@update', $image->id), 'files' => true, 'method' => 'PUT')) }}
+                                           <img id="image" src="{{{ $image->img_path }}}" class="img-responsive">
 
-                               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                 <div class="modal-dialog">
-                                   <div class="modal-content">
-                                     <div class="modal-header">
-                                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                       <h4 class="modal-title" id="myModalLabel">Item Edit</h4>
-                                     </div>
-                                     <div class="modal-body">
-                                       {{ Form::model($image, array('action' => array('ImageController@update', $image->id), 'files' => true, 'method' => 'PUT')) }}
-                                       <img id="image" src="{{{ $image->img_path }}}" class="img-responsive">
-
-                                       {{ Form::file('image') }}
-                                       <br>
-                                       {{ Form::label('Title')}}
-                                       <br>
-                                       {{ Form::text('img_title')}}
-                                       <br>
-                                       {{ Form::label('Price')}}
-                                       <br>
-                                       {{ Form::text('price')}}
-                                       <br>
-                                       {{ Form::label('Description')}}
-                                       <br>
-                                       {{ Form::textarea('img_desc')}}
-                                       <br>
-                                     </div>
-                                     <div class="modal-footer">
-	                                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	                                   <button type="submit" class="btn btn-primary" >Save changes</button>
-	                                   	{{ Form::close() }}
-                                 	 </div>  
-                               	   </div>
-                                 </div>
-                               </div>
-                              <!--  <a href="{{ action('ImageController@edit', $image->id)}}"><button type="button" class="btn btn-lg btn-default">Edit</button></a> -->
-                               @endif
+                                           {{ Form::file('image') }}
+                                           <br>
+                                           {{ Form::label('Title')}}
+                                           <br>
+                                           {{ Form::text('img_title')}}
+                                           <br>
+                                           {{ Form::label('Price')}}
+                                           <br>
+                                           {{ Form::text('price')}}
+                                           <br>
+                                           {{ Form::label('Description')}}
+                                           <br>
+                                           {{ Form::textarea('img_desc')}}
+                                           <br>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                      {{ Form::close() }}
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
                         </div>
                     </div>
-            	@endforeach
+                     @else
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
+                                  View
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="{{'myModal-' . $image->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title" id="{{ 'myModalLabel-' . $image->id }}">{{{ $image->img_title }}}</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                           <img id="image" src="{{{ $image->img_path }}}" class="img-responsive">
+                                            <br>
+                                            Price: {{{ $image->price }}}
+                                            <br>
+                                            Description: {{{ $image->img_desc}}}
+                                            <br>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+
+                     @endif
+                    @endforeach
                 </div> <!-- Row -->
         </div><!-- container -->
 </section>
@@ -145,12 +171,18 @@
 
 
 @if (Auth::check() && (Auth::user()->id == $user->id))
+<<<<<<< HEAD
 <!-- <a href="{{ action('ImageController@create')}}"> Create Post </a> -->
 <a href="{{ action('ImageController@create')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Create Post </a>
 <!-- <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
  -->
 @endif
 </div>
+=======
+<a href="{{ action('ImageController@create')}}"> Create Post </a>
+<a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
+@endif
+>>>>>>> master
 </div>
 @stop
 

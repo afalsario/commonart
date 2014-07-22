@@ -68,6 +68,7 @@ class UsersController extends \BaseController {
 	public function show($username)
 	{
 		$user = User::findByUsername($username);
+		// $user = User::with('image')->findByUsername($username);
 		return View::make('profile')->with('user', $user);
 	}
 
