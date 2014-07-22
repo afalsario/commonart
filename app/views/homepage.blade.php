@@ -26,10 +26,10 @@
                 <!-- Slider Item (image, link and description for your project in slider) -->
                 <div class="item">    
                     <!-- Image -->        
-                    <img src="/assets/img/slider-images/image2.jpg" alt="Specifie an alternate text for an image">
+                    <img src="/assets/img/slider-images/image4.jpg" alt="Specifie an alternate text for an image">
                     <!-- Decription -->
                     <div class="carousel-caption header-carousel-caption">
-                        <h1>Featured Artist </h1> 
+                        <h1>Featured Artist </h1>
                         <!-- Project Link -->
                         <a href="project-inner.html" class="btn white-btn">View Project</a>
                     </div>
@@ -58,161 +58,10 @@
             </div><!-- /container -->                   
             <!-- End Who We Are -->
 
-            <!-- Projects -->            
-            <div class="container-fluid projects padding-top">
-                <div class="row">
-
-                    <!-- Project Item (image, link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">  
-                                <!-- Image -->                  
-                                <img src="/assets/img/portfolio/image1.jpg" alt="Specifie an alternate text for an image" >                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>     
-                                        <h3>Penthouse Walding</h3>
-                                        <p><small>2013/08</small></p>                                               
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                                
-
-                    <!-- Project Item (image, link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">    
-                                <!-- Image -->                
-                                <img src="/assets/img/portfolio/image2.jpg" alt="Specifie an alternate text for an image">                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>
-                                        <h3>Bathroom</h3>
-                                        <p><small>2013/02</small></p>                                                
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                            
-
-                    <!-- Project Item (image, link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html"> 
-                                <!-- Image -->                   
-                                <img src="/assets/img/portfolio/image3.jpg" alt="Specifie an alternate text for an image">                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>                        
-                                        <h3>House in Town</h3>
-                                        <p><small>2012/01</small></p>                            
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                    
-
-                    <!-- Project Item (image, link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">  
-                                <!-- Image -->                  
-                                <img src="/assets/img/portfolio/image4.jpg" alt="Specifie an alternate text for an image">                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>                        
-                                        <h3>House Kitchen</h3>
-                                        <p><small>2014/02</small></p>                            
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>        
-
-                    <!-- Project Item (image,link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">    
-                                <!-- Image -->                
-                                <img src="/assets/img/portfolio/image5.jpg" alt="Specifie an alternate text for an image">                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>
-                                        <h3>VILLA IN CANNES</h3>
-                                        <p><small>2013/08</small></p>                                                
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                        
-
-                    <!-- Project Item (image,link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">  
-                                <!-- Image -->                  
-                                <img src="/assets/img/portfolio/image6.jpg" alt="Specifie an alternate text for an image">                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>
-                                        <h3>Penthouse in New York</h3>
-                                        <p><small>2013/08</small></p>                                                
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                    
-
-                    <!-- Project Item (image,link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">   
-                                <!-- Image -->                 
-                                <img src="/assets/img/portfolio/image7.jpg" alt="Specifie an alternate text for an image">                    
-                                <div class="project-caption">
-                                    <!-- Title and Date -->
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>
-                                        <h3>Kitchen</h3>
-                                        <p><small>2013/08</small></p>                                                    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                    
-
-                    <!-- Project Item (image,link and description for your project) -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="project-inner">
-                            <a href="project-inner.html">    
-                                <!-- Image -->                    
-                                <img src="/assets/img/portfolio/image8.jpg" alt="Specifie an alternate text for an image">                        
-                                <div class="project-caption">
-                                    <!-- Title and Date --> 
-                                    <div class="project-details">
-                                        <p><i class="fa fa-plus fa-lg"></i></p>
-                                        <h3>DUSSELDORF</h3>
-                                        <p><small>2013/08</small></p>                                                    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>                    
-
-                </div><!-- /row -->
-            </div><!-- /container -->
-
             <!-- See All Our Work Button -->
             <div class="all-projects text-center">
                 <a href="projects.html" class="btn orange-btn">
-                    See all our Projects
+                    See all our Artists
                 </a>
             </div>
                             
@@ -283,98 +132,7 @@
             </div><!-- /container -->
             <!-- End Our Services -->
                 
-            <!-- From Blog -->
-            <section class="bg-color padding-top text-center">
-                <div class="container">
-                    <!-- Section General Title -->
-                    <div class="general-title">
-                        <h2>From Blog</h2>
-                        <div class="title-devider"></div>
-                    </div>
-                    <div class="row">
-
-                        <!-- Blog Item (image, title, description, link and date for your blog post) -->
-                        <div class="col-sm-4 col-md-4">
-                            <div class="thumbnail blog-post">
-                                <!-- Image -->                    
-                                <a href="blog-inner.html">
-                                    <img src="/assets/img/blog/image1.jpg" alt="Specifie an alternate text for an image">
-                                </a>
-                                <!-- Title and Description -->
-                                <div class="caption">
-                                    <div class="blog-inner-title">
-                                        <a href="blog-inner.html">
-                                            <h3>Curabitur auctor vulputate quam facilisis eu dolor</h3>                      
-                                        </a>
-                                    </div>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>                        
-                                    <div class="blog-meta">
-                                        <span><i class="fa fa-calendar"></i> <a href="blog-inner.html">April 01, 2014</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-inner.html">03 Comments</a></span>
-                                        <span><i class="fa fa-eye"></i> 84 Views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-
-                        <!-- Blog Item (image, title, description, link and date for your blog post) -->
-                        <div class="col-sm-4 col-md-4">
-                            <div class="thumbnail blog-post">
-                                <!-- Image -->
-                                <a href="blog-inner.html">
-                                    <img src="/assets/img/blog/image2.jpg" alt="Specifie an alternate text for an image"> 
-                                </a>
-                                <!-- Title and Description -->
-                                <div class="caption">
-                                    <div class="blog-inner-title">
-                                        <a href="blog-inner.html">
-                                            <h3>Lorem ipsum dolor sit amet, magna adipiscing elit</h3>
-                                        </a>
-                                    </div>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>                        
-                                    <div class="blog-meta">
-                                        <span><i class="fa fa-calendar"></i> <a href="blog-inner.html">April 01, 2014</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-inner.html">03 Comments</a></span>
-                                        <span><i class="fa fa-eye"></i> 84 Views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-
-                        <!-- Blog Item (image, title, description, link and date for your blog post) -->
-                        <div class="col-sm-4 col-md-4">
-                            <div class="thumbnail blog-post">
-                                <!-- Image -->
-                                <a href="blog-inner.html">
-                                    <img src="/assets/img/blog/image3.jpg" alt="Specifie an alternate text for an image">
-                                </a>
-                                <!-- Title and Description -->
-                                <div class="caption">
-                                    <div class="blog-inner-title">
-                                        <a href="blog-inner.html">
-                                            <h3>Duis in tortor tortor magna euismod id rutrum eros</h3>
-                                        </a>
-                                    </div>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>                    
-                                    <div class="blog-meta">
-                                        <span><i class="fa fa-calendar"></i> <a href="blog-inner.html">April 01, 2014</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-inner.html">03 Comments</a></span>
-                                        <span><i class="fa fa-eye"></i> 84 Views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-
-                    </div><!-- /row -->
-                </div><!-- /container -->
-
-                <!-- All Posts Button -->
-                <div class="text-center padding-top padding-bottom">
-                    <a href="blog.html" class="btn black-btn">See All Posts</a>
-                </div>                
-            </section>
-            <!-- End From blog -->
-
+    
         </div><!-- /site-wrapper -->
         <!-- End Site Wrapper -->
 

@@ -10,7 +10,14 @@ class ImageController extends \BaseController {
 
 	public function index()
 	{
-		$images = Image::all();
+		$images = Image::paginate(6);
+
+		if (Input::has('search'))
+		{
+			$search = Input::get('search');
+			$images = Image::where('img_desc', 'LIKE', '%' . $search . '%')->orWhere('img_title', 'LIKE', '%' . $search . '%')->paginate(50);
+		}
+
     	return View::make('gallery')->with('images', $images);
 	}
 

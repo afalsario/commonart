@@ -9,7 +9,7 @@
     <h2>{{{ $user->first_name }}}'s ArtSpace </h2>
     <div class="title-devider"></div>
 </div>
-
+<div class="container">
 <!-- Site Wrapper -->
 <div class="site-wrapper">
     <!-- Project Inner -->
@@ -76,19 +76,23 @@
                     <div class="col-xs-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
 
-                            <a href="{{ action('ImageController@show', array($image->id)) }}" >   
-                                <!-- Image -->                 
-                             <img src="{{{ $image->img_path }}}" > 
+                            <a href="{{ action('ImageController@show', array($image->id)) }}" >
+                                <!-- Image -->
+                             <img src="{{{ $image->img_path }}}" >
 
                            	</a>
                         </div>
                         <div class="project-inner-caption">
                             <!-- Title and Date -->
                             <div class="project-title">
+                            	@if(!empty($image->img_title))
                                 <a href="{{ action('ImageController@show', array($image->id)) }}"><h3>{{{ $image->img_title }}}</h3></a>
+                                @else
+                                <a href="{{ action('ImageController@show', array($image->id)) }}"> <h3>Image Title</h3> </a>
+                                @endif
                             </div>
                                 <p>Price:${{{ $image->price }}}</p>
-                               
+
                                @if (Auth::check() && (Auth::user()->id == $user->id))
                                <!-- Button trigger modal -->
                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -122,15 +126,13 @@
                                        <br>
                                      </div>
                                      <div class="modal-footer">
-                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                       <button type="submit" class="btn btn-primary" >Save changes</button>
-                                       	{{ Form::close() }}
-                                     </div>
-                                   </div>
+	                                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                                   <button type="submit" class="btn btn-primary" >Save changes</button>
+	                                   	{{ Form::close() }}
+                                 	 </div>  
+                               	   </div>
                                  </div>
                                </div>
-
-
                               <!--  <a href="{{ action('ImageController@edit', $image->id)}}"><button type="button" class="btn btn-lg btn-default">Edit</button></a> -->
                                @endif
                         </div>
@@ -142,6 +144,14 @@
             <!-- End Related Projects -->
 
 
+@if (Auth::check() && (Auth::user()->id == $user->id))
+<!-- <a href="{{ action('ImageController@create')}}"> Create Post </a> -->
+<a href="{{ action('ImageController@create')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Create Post </a>
+<!-- <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
+ -->
+@endif
+</div>
+</div>
 @stop
 
 </div>

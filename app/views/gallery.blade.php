@@ -3,10 +3,6 @@
 
 @section('content')
 
-
-
-
-
 <!-- Site Wrapper -->
 <div class="site-wrapper">
     <div class="container">
@@ -21,23 +17,21 @@
                         <div class="project-inner-caption">
                             <!-- Item Title  -->
                             <div class="project-title">
-                                <h3>{{{ $image->img_title }}}</h3></a>
+                            	@if(!empty($image->img_title)) 
+                                <h3>{{{ $image->img_title }}}</h3>
+								@else 
+								<h3>Image Title</h3>
+								@endif
                             </div>
                             <!-- Title and Mediums -->
-                            <p>Price: {{{ $image->price }}}</p>
+                            <p>Artist: {{{$image->user->first_name . " " . $image->user->last_name}}}</p>
                         </div>
                     </div>
         	@endforeach
                 <!-- Pagination -->
                 <div class="col-lg-12 text-center padding-bottom">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#">«</a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
+                      {{$images->links()}} 
                     </ul>
                 </div>
         </div><!-- /row -->   

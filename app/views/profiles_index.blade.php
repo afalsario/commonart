@@ -2,8 +2,8 @@
 
 @section('content')
 
-<!-- Section General Title -->        
-<div class="general-title bg-color"> 
+<!-- Section General Title -->
+<div class="general-title bg-color">
     <h2>Artists</h2>
     <div class="title-devider"></div>
 </div>
@@ -27,10 +27,9 @@
                         </div>
                         <div class="project-inner-caption">
                             <!-- Username -->
+                            <div class="project-title">
 
-                            <div class="project-title">                    
-                                <a href="{{ action('UsersController@show', array($user->id)) }}"><h3>{{{$user->first_name  . " " . $user->last_name}}}</h3></a>                
-
+                                <a href="{{ action('UsersController@show', array($user->username)) }}"><h3>{{{$user->first_name }}}</h3></a>
                             </div>
                             <!-- Title and Mediums -->
                             <p>Title: {{{$user->title}}}</p>
@@ -41,17 +40,11 @@
                 <!-- Pagination -->
                 <div class="col-lg-12 text-center padding-bottom">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#">«</a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
+                      {{$users->links()}}
                     </ul>
                 </div>
-        </div><!-- /row -->   
-       
+        </div><!-- /row -->
+
         <!-- End Projects -->
     </div>
     <!-- /site-wrapper -->

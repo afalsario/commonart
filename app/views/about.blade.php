@@ -2,7 +2,7 @@
 
 @section('content')
 
-        
+
         <!-- Section General Title -->
         <div class="general-title bg-color">
             <h2>Our Mission</h2>
@@ -16,24 +16,24 @@
             <div class="container">
 
                 <!-- Our Studio (your studio information and images for slider) -->
-                <div class="row padding-bottom">        
+                <div class="row padding-bottom">
                     <div class="col-md-10 col-md-offset-1">
                         <!-- Description -->
-                        <div class="col-md-6">                            
-                            <p><span>LARX</span> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
-                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>    
+                        <div class="col-md-6">
+                            <p><span>LARX</span> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                             <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
                         </div>
                         <!-- Description -->
                         <div class="col-md-6">
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p> 
-                            <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>    
+                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                            <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
                             <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. </p>
                         </div>
-                    </div>        
+                    </div>
 
                     <!-- Slider for images from your studio -->
-                    <div class="col-md-10 col-md-offset-1 padding-top">              
+                    <div class="col-md-10 col-md-offset-1 padding-top">
                         <div id="studio-carousel" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators about-indicators">
                                 <li data-target="#studio-carousel" data-slide-to="0" class="active"></li>
@@ -47,15 +47,15 @@
                                 </div>
                                 <!-- Image -->
                                 <div class="item">
-                                    <img src="assets/img/about/image2.jpg" alt="Specifie an alternate text for an image"> 
+                                    <img src="assets/img/about/image2.jpg" alt="Specifie an alternate text for an image">
                                 </div>
                                 <!-- Image -->
                                 <div class="item">
                                     <img src="assets/img/about/image3.jpg" alt="Specifie an alternate text for an image">
                                 </div>
-                            </div>           
+                            </div>
                         </div>
-                    </div>    
+                    </div>
 
                 </div><!-- /row -->
             </div><!-- /container -->
@@ -133,40 +133,38 @@
                                     <a href="#"><i class="fa fa-twitter fa-lg"></i></a>                
                                     <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-behance fa-lg"></i></a>                  
+                                    <a href="#"><i class="fa fa-behance fa-lg"></i></a>
                             </div>
-                        </div>            
-
-                              
+                        </div>
 
                     </div><!-- /row -->
                 </div><!-- /container -->
             </section>
             <!-- End Our Team -->
 
-            <!-- Our Clients -->          
+            <!-- Our Clients -->
             <div class="container text-center padding-top padding-bottom">
-                <div class="row">    
+                <div class="row">
 
-                    <!-- Client Image -->        
+                    <!-- Client Image -->
                     <div class="col-xs-6 col-md-offset-3">
                         <a href="http://www.codeup.com/" target="_blank">
                             <img src="assets/img/about/codeup_logo.png">
                         </a>
                     </div>
 
-                </div><!-- /row -->   
+                </div><!-- /row -->
             </div><!-- /container -->
             <!-- End Our Clients -->
 
         </div><!-- /site-wrapper -->
-        <!-- End Site Wrapper -->        
+        <!-- End Site Wrapper -->
 
         <!-- Footer -->
         <div id="footer">
-            <div class="container">   
-                <div class="row"> 
-                    <!-- Copyright -->                                    
+            <div class="container">
+                <div class="row">
+                    <!-- Copyright -->
                     <div class="col-md-4 text-center">
                         <p>Copyright 2014 © Wrapbootstrap.com</p>
                     </div>
@@ -187,14 +185,13 @@
                         <a href="#">
                             <i class="fa fa-behance fa-lg"></i>
                         </a>
-                    </div> 
-                    
+                    </div>
                     <!-- Up Button -->
                     <div class="col-md-4 back-to-top">
                         <a href="#">
                             <i class="fa fa-angle-up fa-2x pull-right"></i>
                         </a>
-                    </div>                                                                                                                                                 
+                    </div>
                 </div><!-- /row -->
             </div><!-- /container -->
         </div>
