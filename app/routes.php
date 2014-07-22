@@ -33,14 +33,7 @@ Route::get('upload', function(){
     return View::make('photo_edit');
 });
 
-<<<<<<< HEAD
-Route::post('edit', 'HomeController@post_upload');
 
-// Route::get('gallery', 'HomeController@index');
-
-
-=======
->>>>>>> master
 
 
 
