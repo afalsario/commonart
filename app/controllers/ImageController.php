@@ -128,7 +128,16 @@ class ImageController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$image = Image::findOrFail($id);
+        $image->delete();
+        Session::flash('successMessage', 'Image deleted successfully');
+
+        return Redirect::back();
+	}
+
+	public function doUpload()
+	{
+		return View::make('photo_edit');
 	}
 
 

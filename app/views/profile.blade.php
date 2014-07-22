@@ -66,6 +66,9 @@
         <!-- Section General Title -->
         <div class="general-title"> 
             <h2>My Shop</h2>
+            @if (Auth::check() && (Auth::user()->id == $user->id))
+            <a href="{{ action('ImageController@doUpload')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Create Post </a>
+            @endif
             <div class="title-devider"></div>
         </div>
 
@@ -75,7 +78,7 @@
                     <!-- Project Item (image,link and description for your project) -->
                     <div class="col-xs-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
-                            <a href="{{{$image->img_path}}}"  alt="Make this a link to show page for item">   
+                            <a href="{{ action('ImageController@show', array($image->id)) }}" >   
                                 <!-- Image -->
                              <img src="{{{ $image->img_path }}}" >
                             </a>
@@ -92,10 +95,16 @@
                                 <p>Price:${{{ $image->price }}}</p>
 
                                 <!-- Button trigger modal -->
-@if (Auth::check() && (Auth::user()->id == $user->id))
+								                @if (Auth::check() && (Auth::user()->id == $user->id))
                                 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
                                   Edit
                                 </button>
+                   
+                                  <button class="deleteImage btn btn-md btn-danger" data-imageid="{{ $image->id }}">Delete</button>
+                                  {{ Form::open(array('action' => 'ImageController@destroy', 'id' => 'deleteForm', 'method' => 'DELETE')) }}
+                                  {{ Form::close() }}
+                               
+
                                 <!-- Modal -->
                                 <div class="modal fade" id="{{'myModal-' . $image->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                   <div class="modal-dialog">
@@ -175,9 +184,26 @@
             <!-- End Related Projects -->
 @stop
 
+
 @section('bottomscript')
 
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "ur-8e218bef-762f-3f34-7fa7-847f77e26d", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 @stop
+
+</div>
+</div>
+@stop
+@section('bottomscript')
+ <script type="text/javascript">
+       $(".deleteImage").click(function() {
+           var imageId = $(this).data('imageid');
+           $("#deleteForm").attr('action', '/gallery/' + imageId);
+           if(confirm("Are you sure you want to delete this user?")) {
+               $('#deleteForm').submit();
+           }
+       });
+</script>
+@stop
+
 <!-- End Site Wrapper -->

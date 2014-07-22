@@ -134,7 +134,7 @@
             </div><!-- /container -->
         </div>
         <!-- End Footer -->
-@yield('bottomscript')
+
         <!-- Js Global Compulsory  -->
         <script src="/assets/plugins/jquery-1.11.1.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -143,5 +143,6 @@
         <script src="/assets/plugins/lightbox/js/lightbox.js"></script>
         <!-- Js Theme  -->
         <script src="/assets/js/app.js"></script>
-    </body>
+ @yield('bottomscript')   
+</body>
 </html>
