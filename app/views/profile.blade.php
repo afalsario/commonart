@@ -51,6 +51,9 @@
                 <div class="project-description">
                     <p>{{{ $user->about_me }}}</p>
                 </div>
+                @if (Auth::check() && (Auth::user()->id == $user->id))
+                <a href="{{ action('UsersController@edit', $user->id)}}">Edit Profile</a>
+                @endif
             </div>
 
         </div><!-- row -->    
@@ -138,11 +141,7 @@
 </section>
             <!-- End Related Projects -->
 
-@if (Auth::check() && (Auth::user()->id == $user->id))
-<a href="{{ action('ImageController@create')}}"> Create Post </a>
-<a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
-@endif
-</div>
+
 @stop
 
 </div>
