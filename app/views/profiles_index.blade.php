@@ -2,8 +2,8 @@
 
 @section('content')
 
-<!-- Section General Title -->        
-<div class="general-title bg-color"> 
+<!-- Section General Title -->
+<div class="general-title bg-color">
     <h2>Artists</h2>
     <div class="title-devider"></div>
 </div>
@@ -27,10 +27,9 @@
                         </div>
                         <div class="project-inner-caption">
                             <!-- Username -->
+                            <div class="project-title">
 
-                            <div class="project-title">                    
-                                <a href="{{ action('UsersController@show', array($user->id)) }}"><h3>{{{$user->first_name  . " " . $user->last_name}}}</h3></a>                
-
+                                <a href="{{ action('UsersController@show', array($user->username)) }}"><h3>{{{$user->first_name }}}</h3></a>
                             </div>
                             <!-- Title and Mediums -->
                             <p>Title: {{{$user->title}}}</p>
@@ -50,8 +49,8 @@
                         <li><a href="#">»</a></li>
                     </ul>
                 </div>
-        </div><!-- /row -->   
-       
+        </div><!-- /row -->
+
         <!-- End Projects -->
     </div>
     <!-- /site-wrapper -->

@@ -139,9 +139,12 @@
             <!-- End Related Projects -->
 
 @if (Auth::check() && (Auth::user()->id == $user->id))
-<a href="{{ action('ImageController@create')}}"> Create Post </a>
-<a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
-@endif
+<!-- <a href="{{ action('ImageController@create')}}"> Create Post </a> -->
+<a href="{{ action('ImageController@create')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Create Post </a>
+<!-- <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
+ -->
+ <a href="{{ action('UsersController@edit', $user->id)}}" class="btn btn-warning"><i class="icon-white icon-heart"></i> Edit Profile </a>
+ @endif
 </div>
 @stop
 
