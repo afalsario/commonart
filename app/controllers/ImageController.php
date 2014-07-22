@@ -111,7 +111,7 @@ class ImageController extends \BaseController {
 
 		if(Input::hasFile('image') && Input::file('image')->isValid())
 	        {
-	            $image->img_path = $image->makeThumbnails('gallery_pics',Input::file('image'), $image->user_id);
+	            $image->img_path = $image->makeThumbnails('gallery_pics', Input::file('image'), $image->user_id);
 	            $image->save();
 	        }
 	    // return Redirect::action('ImageController@show', $image->id);

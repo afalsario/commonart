@@ -72,9 +72,11 @@
                     <!-- Project Item (image,link and description for your project) -->
                     <div class="col-xs-6 col-md-4 project-item">
                         <div class="thumbnail projects-thumbnail">
-                            <a href="{{{$image->img_path}}}"  alt="Make this a link to show page for item">
-                                <!-- Image -->
-                             <img src="{{{ $image->img_path }}}" >
+
+                            <a href="{{ action('ImageController@show', array($image->id)) }}" >   
+                                <!-- Image -->                 
+                             <img src="{{{ $image->img_path }}}" > 
+
                            	</a>
                         </div>
                         <div class="project-inner-caption">
@@ -83,6 +85,51 @@
                                 <a href="{{ action('ImageController@show', array($image->id)) }}"><h3>{{{ $image->img_title }}}</h3></a>
                             </div>
                                 <p>Price:${{{ $image->price }}}</p>
+                               
+                               @if (Auth::check() && (Auth::user()->id == $user->id))
+                               <!-- Button trigger modal -->
+                               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                 Edit
+                               </button>
+
+                               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                   <div class="modal-content">
+                                     <div class="modal-header">
+                                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                       <h4 class="modal-title" id="myModalLabel">Item Edit</h4>
+                                     </div>
+                                     <div class="modal-body">
+                                       {{ Form::model($image, array('action' => array('ImageController@update', $image->id), 'files' => true, 'method' => 'PUT')) }}
+                                       <img id="image" src="{{{ $image->img_path }}}" class="img-responsive">
+
+                                       {{ Form::file('image') }}
+                                       <br>
+                                       {{ Form::label('Title')}}
+                                       <br>
+                                       {{ Form::text('img_title')}}
+                                       <br>
+                                       {{ Form::label('Price')}}
+                                       <br>
+                                       {{ Form::text('price')}}
+                                       <br>
+                                       {{ Form::label('Description')}}
+                                       <br>
+                                       {{ Form::textarea('img_desc')}}
+                                       <br>
+                                     </div>
+                                     <div class="modal-footer">
+                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                       <button type="submit" class="btn btn-primary" >Save changes</button>
+                                       	{{ Form::close() }}
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+
+                              <!--  <a href="{{ action('ImageController@edit', $image->id)}}"><button type="button" class="btn btn-lg btn-default">Edit</button></a> -->
+                               @endif
                         </div>
                     </div>
             	@endforeach
