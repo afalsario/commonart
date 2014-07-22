@@ -5,35 +5,18 @@
 
 
 
-<img src="{{{ $image->img_path }}}" class="img-responsive">
+
 
     <!-- Site Wrapper -->
 <div class="site-wrapper">
     <div class="container">
         <div class="row">
             @foreach($images as $image)
-            <!-- Items -->
-                    <!-- Item Discription -->
-                    <div class="col-sm-6 col-md-4 project-item">
-                        <div class="thumbnail projects-thumbnail">
-                            <a href="{{action('ImageController@show', array($user->id))}}">
-                                <!-- Image -->
-                                @if(isset($user->img_path)) 
-                                <img src="{{{ $image->img_path }}}" alt="Profile Image">   
-                                @else
-                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image"> 
-                                @endif                                                                
-                            </a>         
-                        </div>
-                        <div class="project-inner-caption">
-                            <!-- Item Title  -->
-                            <div class="project-title">                    
-                                <h3>{{{ $image->img_title }}}</h3></a>                
-                            </div>
-                            <!-- Title and Mediums -->
-                            <p>Price: {{{ $image->price }}}</p>            
-                        </div>
-                    </div>
+            <img src="{{{ $image->img_path }}}" class="img-responsive">
+            <h2>{{{ $image->img_title }}}</h2>
+            <h3>{{{ $image->img_desc }}}</h3>
+            <h5>${{{ $image->price }}}</h5>
+            <hr>
         	@endforeach
                 <!-- Pagination -->
                 <div class="col-lg-12 text-center padding-bottom">

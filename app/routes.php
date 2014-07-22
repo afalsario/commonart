@@ -35,7 +35,7 @@ Route::get('edit', function(){
 
 Route::post('edit', 'HomeController@post_upload');
 
-Route::get('gallery', 'HomeController@index');
+// Route::get('gallery', 'HomeController@index');
 
 
 
