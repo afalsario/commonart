@@ -60,15 +60,6 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                 <li>
-                                    {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
-
-                                    {{ Form::text('search') }}
-
-                                    <input type="submit" value="Search">
-
-                                    {{ Form::close() }}
-                                </li>
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
 
                                 <li><a href="{{ action('ImageController@index')}}"> Gallery </a></li>

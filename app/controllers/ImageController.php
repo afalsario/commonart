@@ -17,6 +17,12 @@ class ImageController extends \BaseController {
 			$search = Input::get('search');
 			$images = Image::where('img_desc', 'LIKE', '%' . $search . '%')->orWhere('img_title', 'LIKE', '%' . $search . '%')->paginate(50);
 		}
+		if(Input::has('min') && Input::has('max'))
+		{
+			$min = Input::get('min');
+			$max = Input::get('max');
+			$images = Image::where('price', '>=' , $min)->where('price', '<=' , $max)->paginate(50);
+		}
 
     	return View::make('gallery')->with('images', $images);
 	}
