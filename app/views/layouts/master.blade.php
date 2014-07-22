@@ -71,7 +71,7 @@
                                 </li>
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
 
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="{{ action('ImageController@index')}}"> Gallery </a></li>
                                 <li><a href="{{ action('UsersController@index')}}">Artists</a></li>
 
 
@@ -96,7 +96,7 @@
                                  @if(Auth::check())
 
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{{ Auth::user()->first_name }}}</a>
+                                                <a href="{{action('UsersController@show', array(Auth::user()->username))}}" class="dropdown-toggle" data-toggle="dropdown">{{{ Auth::user()->first_name }}}</a>
                                                 <ul class="dropdown-menu" role="menu">
                                                     @if(Auth::user()->isAdmin == true)
                                                    <li><a href="{{action('AdminController@index')}}">Dashboard</a></li>
@@ -110,7 +110,6 @@
 
                                             @else
                                             <li><a href="{{ action('HomeController@doLogin')}}">Login</a></li>
-
                                 @endif
 
                             </ul>

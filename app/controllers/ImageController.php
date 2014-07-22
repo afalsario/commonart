@@ -10,7 +10,7 @@ class ImageController extends \BaseController {
 
 	public function index()
 	{
-		$images = Image::all();
+		$images = Image::paginate(6);
 
 		if (Input::has('search'))
 		{
