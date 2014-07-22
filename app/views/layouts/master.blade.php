@@ -60,39 +60,10 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                 <li>
-                                    {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
-
-                                    {{ Form::text('search') }}
-
-                                    <input type="submit" value="Search">
-
-                                    {{ Form::close() }}
-                                </li>
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
 
                                 <li><a href="{{ action('ImageController@index')}}"> Gallery </a></li>
                                 <li><a href="{{ action('UsersController@index')}}">Artists</a></li>
-
-
-                                <!-- Dropdown -->
-                               <!--  <li class="dropdown">
-                                    <a href="projects.html" class="dropdown-toggle" data-toggle="dropdown">Artists</a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        All artists was here
-                                        <li><a href="projects.html">Gallery Style</a></li>
-                                    </ul>
-                                </li> -->
-
-                                <!-- Dropdown -->
-                               <!--  <li class="dropdown">
-                                    <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="blog-inner.html">Single Blog</a></li>
-                                        <li><a href="blog.html">Gallery Blog</a></li>
-                                    </ul>
-                                </li> -->
-
                                  @if(Auth::check())
 
                                             <li class="dropdown">
@@ -102,8 +73,8 @@
                                                    <li><a href="{{action('AdminController@index')}}">Dashboard</a></li>
                                                    @endif
                                                     <li><a href="{{action('UsersController@show', array(Auth::user()->username))}}">My Art Space </a></li>
-                                                    <li><a href="{{ action('ImageController@index', array(Auth::user()->id))}}">My Shop</a></li>
-                                                    <li><a href="{{ action('ImageController@create', array(Auth::user()->id))}}">Update Gallery</a></li>
+                                                    <li><a href="{{ action('UsersController@edit', array(Auth::user()->id))}}">Update Profile</a></li>
+                                                    <li><a href="http://commonart.dev/upload">Update Gallery</a></li>
                                                     <li><a href="{{ action('HomeController@logout')}}">Logout</a></li>
                                                 </ul>
                                             </li>

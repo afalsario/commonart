@@ -157,6 +157,11 @@
                                       <div class="modal-body">
                                            <img id="image" src="{{{ $image->img_path }}}" class="img-responsive">
                                             <br>
+<span class='st_facebook_hcount' displayText='Facebook'></span>
+<span class='st_twitter_hcount' displayText='Tweet'></span>
+<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+<span class='st_tumblr_hcount' displayText='Tumblr'></span>
+                                            <hr>
                                             Price: {{{ $image->price }}}
                                             <br>
                                             Description: {{{ $image->img_desc}}}
@@ -177,6 +182,14 @@
         </div><!-- container -->
 </section>
             <!-- End Related Projects -->
+@stop
+
+
+@section('bottomscript')
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-8e218bef-762f-3f34-7fa7-847f77e26d", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+@stop
 
 </div>
 </div>
