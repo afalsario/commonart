@@ -11,7 +11,7 @@ class Image extends Eloquent{
         return $this->belongsTo('User');
     }
 
-    function makeThumbnails($updir, $img, $id,$MaxWe=450,$MaxHe=450)
+    function makeThumbnails($updir, $img, $id,$MaxWe=700,$MaxHe=700)
     {
         $arr_image_details = getimagesize($img); 
         $width = $arr_image_details[0];
@@ -52,7 +52,7 @@ class Image extends Eloquent{
 
             $imgt($new_image, $updir."/". $id . "-" . $img->getClientOriginalName());
 
-            return "/".$updir."/".$img->getClientOriginalName();
+            return "/".$updir."/".$id . "-" . $img->getClientOriginalName();
         }
     }
 

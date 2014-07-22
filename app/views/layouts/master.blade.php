@@ -96,7 +96,7 @@
                                  @if(Auth::check())
 
                                             <li class="dropdown">
-                                                <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">{{{ Auth::user()->first_name }}}</a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{{ Auth::user()->first_name }}}</a>
                                                 <ul class="dropdown-menu" role="menu">
                                                     @if(Auth::user()->isAdmin == true)
                                                    <li><a href="{{action('AdminController@index')}}">Dashboard</a></li>
