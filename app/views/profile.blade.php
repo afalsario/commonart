@@ -171,18 +171,13 @@
 
 
 @if (Auth::check() && (Auth::user()->id == $user->id))
-<<<<<<< HEAD
 <!-- <a href="{{ action('ImageController@create')}}"> Create Post </a> -->
 <a href="{{ action('ImageController@create')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Create Post </a>
 <!-- <a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
  -->
 @endif
 </div>
-=======
-<a href="{{ action('ImageController@create')}}"> Create Post </a>
-<a href="{{ action('UsersController@edit', $user->id)}}">Edit</a>
-@endif
->>>>>>> master
+
 </div>
 @stop
 
