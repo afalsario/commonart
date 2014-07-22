@@ -19,7 +19,7 @@ class UsersController extends \BaseController {
 
 	public function index()
 	{
-		$users = User::all();
+		$users = User::paginate(6);
     	return View::make('profiles_index')->with('users', $users);
 	}
 

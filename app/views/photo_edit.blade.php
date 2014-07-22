@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 @section('topscript')
-        <script src="/assets/plugins/jquery-1.11.1.min.js"></script>
-        <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+       
         <script src="/dropzone/downloads/dropzone.js"></script>
 
         <style type="text/css">
