@@ -177,9 +177,10 @@
         </div><!-- container -->
 </section>
             <!-- End Related Projects -->
+
 </div>
 </div>
-@stop 
+@stop
 @section('bottomscript')
  <script type="text/javascript">
        $(".deleteImage").click(function() {
