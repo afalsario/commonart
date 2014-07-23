@@ -31,7 +31,7 @@ Route::resource('admin', 'AdminController');
 
 Route::get('/upload', 'ImageController@doUpload');
 
-
-
-
-
+Event::listen('illuminate.query', function($sql, $bindings)
+{
+  Log::info($sql, $bindings);
+});
