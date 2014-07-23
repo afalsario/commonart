@@ -24,8 +24,8 @@
                 </div>
 
                 <!-- Slider Item (image, link and description for your project in slider) -->
-                <div class="item">    
-                    <!-- Image -->        
+                <div class="item">
+                    <!-- Image -->
                     <img src="/assets/img/slider-images/image4.jpg" alt="Specifie an alternate text for an image">
 
                     <!-- Decription -->
@@ -58,6 +58,7 @@
             </div><!-- /container -->
             <!-- End Who We Are -->
 
+
             <!-- Projects -->
             <div class="container-fluid projects padding-top">
                 <div class="row">
@@ -65,8 +66,8 @@
 
                 </div><!-- /row -->
             </div><!-- /container -->
+
         </div><!-- /site-wrapper -->
         <!-- End Site Wrapper -->
-
 
 @stop

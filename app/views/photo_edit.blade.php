@@ -82,7 +82,6 @@
         <br>
       </div>
       <br>
-
     </div>
 </div>
 <br>
@@ -126,7 +125,8 @@
             });
 
             this.on("complete", function(file) {
-                console.log(file);
+                console.log('success');
+                alert('Successful Upload!');
                 file.previewElement.querySelector(".progress").style.opacity = "0";
             });
         }
@@ -144,4 +144,17 @@
         document.querySelector("#my-awesome-dropzone").dropzone.removeAllFiles(true);
       };
     </script>
+    <hr>
+    <div class="container">
+    After all your images are uploaded, let's go back to your profile and edit the descriptions!
+    <br>
+    <a href="{{action('UsersController@show', array(Auth::user()->username))}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Edit </a>
+    </div>
 @stop
+
+
+
+
+
+
+
