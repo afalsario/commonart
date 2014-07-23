@@ -59,7 +59,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $this->img_path = '/' . $this->imgDir . '/' . $imageName;
     }
 
-    function makeThumbnails($updir, $img, $id,$MaxWe=300,$MaxHe=300)
+    function makeThumbnails($updir, $img, $id,$MaxWe=500,$MaxHe=500)
     {
         $arr_image_details = getimagesize($img); 
         $width = $arr_image_details[0];

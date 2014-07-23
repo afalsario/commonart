@@ -3,11 +3,7 @@
 .projects-thumbnail img{
 
 	display:block;
-	
-	height: auto;
-	
-
-
+	height: auto;	
 }
 
 .profile-img {
@@ -18,3 +14,4 @@
 	display: block;
 	margin: auto;	
 }
+

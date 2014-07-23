@@ -63,7 +63,7 @@
                 <div class="general-title">
                     <h2>My Shop</h2>
                     @if (Auth::check() && (Auth::user()->id == $user->id))
-                        <a href="{{ action('ImageController@doUpload')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Upload Image </a>
+                        <a href="{{ action('ImageController@doUpload')}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> New Item </a>
                     @endif
                     <div class="title-devider"></div>
                 </div>
