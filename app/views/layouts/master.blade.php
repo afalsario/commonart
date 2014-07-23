@@ -1,19 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <title>COMMON ART SA</title>
 
         <!-- Meta Tags -->
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Favicon-->
-        <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
 
         <!-- Css Global Compulsory -->
         <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -49,8 +40,6 @@
                             </button>
 
                             <a class="navbar-brand" href="{{ action('HomeController@showHomepage')}}">
-                                <!-- Logo Image -->
-                                <!-- <img src="/assets/img/logo-header.png" alt="Specifie an alternate text for an image"> -->
                                 <h1>COMMON ART SA</h1>
                             </a>
                         </div>
@@ -80,7 +69,8 @@
                                             </li>
 
                                             @else
-                                            <li><a href="{{ action('HomeController@doLogin')}}">Login</a></li>
+                                            <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+                                            @include('layouts.partials.login')
                                 @endif
 
                             </ul>
