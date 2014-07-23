@@ -7,6 +7,7 @@
     <h2>Artists</h2>
     <div class="title-devider"></div>
 </div>
+<div class="container">
     <!-- Site Wrapper -->
 <div class="site-wrapper">
     <div class="container-fluid">
@@ -21,7 +22,7 @@
                                 @if(isset($user->img_path))
                                 <img src="{{{$user->img_path}}}" alt="Profile Image">
                                 @else
-                                <img src="assets/img/portfolio/image1.jpg" alt="Profile Image">
+                                <img src="assets/img/about/image4.jpg" alt="Profile Image">
                                 @endif
                             </a>
                         </div>
@@ -49,5 +50,6 @@
     </div>
     <!-- /site-wrapper -->
     <!-- End Site Wrapper -->
- </div><!-- /container -->
+ </div>
+</div><!-- /container -->
 @stop
