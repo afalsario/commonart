@@ -8,7 +8,7 @@ class UsersController extends \BaseController {
 	    parent::__construct();
 
 	    // run auth filter before all methods on this controller except index and show
-	    $this->beforeFilter('auth', array('except' => array('index', 'show')));
+	    $this->beforeFilter('auth', array('except' => array('index', 'show', 'store')));
 	}
 	/**
 	 * Display a listing of the resource.
@@ -19,7 +19,7 @@ class UsersController extends \BaseController {
 
 	public function index()
 	{
-		$users = User::paginate(6);
+		$users = User::paginate(3);
     	return View::make('profiles_index')->with('users', $users);
 	}
 

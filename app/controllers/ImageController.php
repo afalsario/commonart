@@ -19,27 +19,41 @@ class ImageController extends \BaseController {
 
 	public function index()
 	{
-		$images = Image::paginate(6);
+		$query = Image::with('user');
 
 		if (Input::has('search'))
 		{
-			$search = Input::get('search');
-			$images = Image::where('img_desc', 'LIKE', '%' . $search . '%')->orWhere('img_title', 'LIKE', '%' . $search . '%')->paginate(50);
+			$query->where(function($q) {
+				$search = Input::get('search');
+
+				$q->where('img_desc', 'LIKE', "%$search%");
+				$q->orWhere('img_title', 'LIKE', "%$search%");
+			});
 		}
-		if(Input::has('min') && Input::has('max'))
-		{
+
+		if (Input::has('min')) {
 			$min = Input::get('min');
+
+			$query->where('price', '>=', $min);
+		}
+
+		if (Input::has('max')) {
 			$max = Input::get('max');
-			$images = Image::where('price', '>=' , $min)->where('price', '<=' , $max)->paginate(50);
+
+			$query->where('price', '<=', $max);
 		}
-		if(Input::has('paint'))
-		{
-			$images = Image::where('img_desc', 'LIKE', '%paint%')->paginate(50);
+
+		if (Input::has('medium')) {
+			$query->where(function($q) {
+				foreach(Input::get('medium') as $medium) {
+					$q->orWhereHas('user', function($r) use ($medium) {
+						$r->where('mediums', 'LIKE', "%$medium%");
+					});
+				}
+			});
 		}
-		if(Input::has('sculpture'))
-		{
-			$images = Image::where('img_desc', 'LIKE', '%sculpt%')->paginate(50);
-		}
+
+		$images = $query->paginate(6);
 
     	return View::make('gallery')->with('images', $images);
 	}
