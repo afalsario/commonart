@@ -14,22 +14,22 @@
 
 {{ Form::file('image') }}
 <br>
-{{ Form::label('Name')}}
+{{ Form::label('First Name')}}
 <br>
 {{ Form::text('first_name') }}
-<br>
-{{ Form::label('Last')}}
+<br><br>
+{{ Form::label('Last Name')}}
 <br>
 {{ Form::text('last_name') }}
-<br>
+<br><br>
 {{ Form::label('Title') }}
 <br>
 {{ Form::text('title') }}
-<br>
+<br><br>
 {{ Form::label('Mediums') }}
 <br>
 {{ Form::text('mediums') }}
-<br>
+<br><br>
 {{ Form::label('About Me')}}
 <br>
 {{ Form::textarea('about_me') }}

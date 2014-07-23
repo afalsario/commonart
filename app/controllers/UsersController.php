@@ -2,20 +2,20 @@
 
 class UsersController extends \BaseController {
 
+	public function __construct()
+	{
+	    // call base controller constructor
+	    parent::__construct();
+
+	    // run auth filter before all methods on this controller except index and show
+	    $this->beforeFilter('auth', array('except' => array('index', 'show')));
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 
-// 	public function __construct()
-// {
-//     // call base controller constructor
-//     parent::__construct();
-
-//     // run auth filter before all methods on this controller except index and show
-//     $this->beforeFilter('auth', array('except' => array('index', 'show')));
-//}
 
 	public function index()
 	{
@@ -44,13 +44,15 @@ class UsersController extends \BaseController {
 	{
 		$user = new User();
 
-		$user->first_name = 'New User';
-		$user->last_name = "";
+		$user->first_name = 'First Name';
+		$user->last_name = "Last Name";
+		$user->img_path = '/placeholder.jpg';
 		$user->username = Input::get('username');
 		$user->password = Input::get('password');
 		$user->email = Input::get('email');
-		$user->title = "";
-		$user->about_me = "";
+		$user->title = "(ex. Kitten Sculptor)";
+		$user->mediums = "(ex. Kitten Fur, Paint)";
+		$user->about_me = "I love art!";
 		$user->save();
 
 		Auth::login($user);

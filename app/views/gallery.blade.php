@@ -46,20 +46,22 @@
                                     id="max" />
                             </div>
                         </div>
-                        <div class="cell">
-                            <button class="btn btn-secondary" type="submit">
-                                Submit
-                            </button>
-                        </div>
                     </div>
-                {{ Form::close() }}
                 <!-- end price filter -->
+                Search By Media Type
+                <br>
                 {{ Form::checkbox('paint', 'paint') }} Paint
                     <br>
                 {{ Form::checkbox('photography', 'photography') }} Photography
                     <br>
                 {{ Form::checkbox('sculpture', 'sculpture') }} Sculpture
                     <br>
+                        <div class="cell">
+                            <button class="btn btn-secondary" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                {{ Form::close() }}
             </div>
         </div>
         <!-- End Price Filter -->

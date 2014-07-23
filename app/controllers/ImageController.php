@@ -2,6 +2,15 @@
 
 class ImageController extends \BaseController {
 
+	public function __construct()
+	{
+	    // call base controller constructor
+	    parent::__construct();
+
+	    // run auth filter before all methods on this controller except index and show
+	    $this->beforeFilter('auth', array('except' => array('index', 'show')));
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -22,6 +31,14 @@ class ImageController extends \BaseController {
 			$min = Input::get('min');
 			$max = Input::get('max');
 			$images = Image::where('price', '>=' , $min)->where('price', '<=' , $max)->paginate(50);
+		}
+		if(Input::has('paint'))
+		{
+			$images = Image::where('img_desc', 'LIKE', '%paint%')->paginate(50);
+		}
+		if(Input::has('sculpture'))
+		{
+			$images = Image::where('img_desc', 'LIKE', '%sculpt%')->paginate(50);
 		}
 
     	return View::make('gallery')->with('images', $images);
