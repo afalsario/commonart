@@ -33,6 +33,11 @@
                                     <b>Artist:</b> {{{$user->first_name . " " . $user->last_name}}}
                                 </li>
 
+                                <!-- Contact -->
+                                <li>
+                                    <b>Contact:</b> <a href="mailto:{{{ ($user->email) }}}?Subject=Hello">{{{ $user->email }}}</a>
+                                </li>
+
                                 <!-- Title -->
                                 <li>
                                     <b>Title:</b> {{{ $user->title }}}
