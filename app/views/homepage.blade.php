@@ -24,8 +24,8 @@
                 </div>
 
                 <!-- Slider Item (image, link and description for your project in slider) -->
-                <div class="item">    
-                    <!-- Image -->        
+                <div class="item">
+                    <!-- Image -->
                     <img src="/assets/img/slider-images/image4.jpg" alt="Specifie an alternate text for an image">
 
                     <!-- Decription -->
