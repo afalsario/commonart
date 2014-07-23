@@ -30,7 +30,7 @@
                             <!-- Username -->
                             <div class="project-title">
 
-                                <a href="{{ action('UsersController@show', array($user->username)) }}"><h3>{{{$user->first_name }}}</h3></a>
+                                <a href="{{ action('UsersController@show', array($user->username)) }}"><h3>{{{$user->first_name . " " . $user->last_name }}}</h3></a>
                             </div>
                             <!-- Title and Mediums -->
                             <p>Title: {{{$user->title}}}</p>
