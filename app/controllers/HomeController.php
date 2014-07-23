@@ -46,7 +46,7 @@ class HomeController extends BaseController {
 	{
 		Auth::logout();
 		Session::flash('logoutMessage', "You are logged out! ");
-		return View::make('login');
+		return View::make('homepage');
 	}
 
 	public function showProfile()
