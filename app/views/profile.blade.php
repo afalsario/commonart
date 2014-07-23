@@ -191,7 +191,7 @@
         $(".deleteImage").click(function() {
             var imageId = $(this).data('imageid');
             $("#deleteForm").attr('action', '/gallery/' + imageId);
-            if(confirm("Are you sure you want to delete this user?"))
+            if(confirm("Are you sure you want to delete this image?"))
             {
                 $('#deleteForm').submit();
             }
