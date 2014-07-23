@@ -58,83 +58,6 @@
             </div><!-- /container -->
             <!-- End Who We Are -->
 
-<<<<<<< HEAD
-            <!-- See All Our Work Button -->
-            <div class="all-projects text-center">
-                <a href="projects.html" class="btn orange-btn">
-                    See all our Artists
-                </a>
-            </div>
-                            
-            <!-- End Projects -->
-
-            <!-- Our Services -->            
-            <div class="container padding-top text-center"> 
-                <!-- Section General Title -->       
-                <div class="general-title">
-                    <h2>Our Services</h2>        
-                    <div class="title-devider"></div>
-                </div>  
-                <!-- Section Description -->             
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>    
-                <div class="row padding-top"> 
-
-                    <!-- Services Item (icon, title and description for your service) -->                        
-                    <div class="col-sm-4 col-md-4">  
-                        <!-- Icon -->
-                        <a href="services.html">                                
-                            <i class="fa fa-home fa-3x"></i>     
-                        </a> 
-                        <!-- Title -->  
-                        <div class="service-title">      
-                            <h3>Interior Design</h3> 
-                        </div>   
-                        <!-- Description -->                  
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
-                    </div>
-
-                    <!-- Services Item (icon, title and description for your service) -->
-                    <div class="col-sm-4 col-md-4">
-                        <!-- Icon -->  
-                        <a href="services.html">
-                            <i class="fa fa-building fa-3x"></i>          
-                        </a> 
-                        <!-- Title -->
-                        <div class="service-title">
-                            <h3>Architecture</h3>
-                        </div>
-                        <!-- Description -->
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
-                    </div>                        
-
-                    <!-- Services Item (icon, title and description for your service) -->
-                    <div class="col-sm-4 col-md-4">
-                        <!-- Icon -->
-                        <a href="services.html">
-                            <i class="fa fa-file-text-o fa-3x"></i> 
-                        </a>
-                        <!-- Title -->
-                        <div class="service-title">
-                            <h3>Design Consultations</h3>
-                        </div>
-                        <!-- Description -->
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>                 
-                    </div>                          
-
-                </div><!-- /row -->
-
-                <!-- View All Services Button -->  
-                <div class="padding-top padding-bottom">  
-                    <a href="services.html" class="btn black-btn">
-                        View all Services
-                    </a>
-                </div>
-
-            </div><!-- /container -->
-            <!-- End Our Services -->
-                
-    
-=======
             <!-- Projects -->
             <div class="container-fluid projects padding-top">
                 <div class="row">
@@ -142,9 +65,6 @@
 
                 </div><!-- /row -->
             </div><!-- /container -->
-
-
->>>>>>> master
         </div><!-- /site-wrapper -->
         <!-- End Site Wrapper -->
 
