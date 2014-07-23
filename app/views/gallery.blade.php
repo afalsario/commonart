@@ -7,7 +7,6 @@
 <div class="container">
     <!-- Start Row -->
     <div class="row">
-        <h4>{{Form::label('Search')}}</h4>
         {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
         <h4>Search</h4>
         {{ Form::text('search') }}
@@ -52,11 +51,11 @@
                 <!-- end price filter -->
                 <br>
                 <h4>Search By Media Type</h4>
-                {{ Form::checkbox('paint', 'paint') }} Paint
+                {{ Form::checkbox('medium[]', 'paint') }} Paint
                     <br>
-                {{ Form::checkbox('photography', 'photography') }} Photography
+                {{ Form::checkbox('medium[]', 'photography') }} Photography
                     <br>
-                {{ Form::checkbox('sculpture', 'sculpture') }} Sculpture
+                {{ Form::checkbox('medium[]', 'sculpture') }} Sculpture
                     <br>
                         <div class="cell">
                             <button class="btn btn-secondary" type="submit">
