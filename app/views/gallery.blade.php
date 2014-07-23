@@ -7,7 +7,7 @@
 <div class="container">
     <!-- Start Row -->
     <div class="row">
-
+        <h4>{{Form::label('Search')}}</h4>
         {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
         <h4>Search</h4>
         {{ Form::text('search') }}
