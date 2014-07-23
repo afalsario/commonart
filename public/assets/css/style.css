@@ -255,6 +255,13 @@ a:focus {
 	margin: auto;
 	margin-bottom: 40px;
 }
+.edit-devider{
+	border-bottom: 2px solid #ff5733;
+	display: block;
+	width: 100px;
+	
+	margin-bottom: 40px;
+}
 .padding-top{
 	padding-top: 70px;
 }
