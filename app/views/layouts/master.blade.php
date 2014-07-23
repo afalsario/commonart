@@ -40,7 +40,7 @@
                             </button>
 
                             <a class="navbar-brand" href="{{ action('HomeController@showHomepage')}}">
-                                <h1>COMMON ART SA</h1>
+                                <img src="/assets/img/about/casa_logo.jpg"> 
                             </a>
                         </div>
                     </div>
