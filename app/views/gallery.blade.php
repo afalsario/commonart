@@ -6,58 +6,41 @@
 <br>
 <div class="container">
     <div class="row">
-    <!-- Start Row -->
-        {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
-        <h4>Search</h4>
-        {{ Form::text('search') }}
-        <!-- Price filter -->
-        <br>
-        <br>
-            <h4>
-                Price Filter
-            </h4>
-                {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET', 'id' => 'input-price-range', 'class' => 'common-form')) }}
-                                <span class="currency-symbol">$</span>
-                                <input
-                                    class="price"
-                                    type="number" step="any"
-                                    name="min"
-                                    value=""
-                                    placeholder="min"
-                                    id="min" />
-                            <span class="price-range-to">
-                            to
-                            </span>
-                                <span class="currency-symbol">$</span>
-                                <input
-                                    class="price"
-                                    type="number" step="any"
-                                    placeholder="max"
-                                    name="max"
-                                    value=""
-                                    id="max" />
-                <!-- end price filter -->
-                <br>
-                <h4>Search By Media Type</h4>
-                {{ Form::label('Paint') }}
-                {{ Form::checkbox('medium[]', 'paint') }}
-                    <br>
-                {{ Form::label('Photography') }}
-                {{ Form::checkbox('medium[]', 'photography') }}
-                    <br>
-                {{ Form::label('Scuplture') }}
-                {{ Form::checkbox('medium[]', 'sculpture') }}
-                    <br>
-                        <!-- <div class="cell"> -->
-                            <button class="btn btn-secondary" type="submit">
-                                Submit
-                            </button>
-                        <!-- </div> -->
-                {{ Form::close() }}
-            <!-- </div> -->
 
-    </div>
-    <!-- End Row -->
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
+                <label class="sr-only" for="search">Search</label> 
+                <input type="text" class="form-control" name="search" id="search" placeholder="search...">  
+            </div>
+        <!-- <input type="submit" value="Search"> -->
+        <!-- Price filter -->
+         <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">$</div>
+                  {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET', 'id' => 'input-price-range', 'class' => 'common-form')) }}
+                <input class="form-control" type="number" step="any" placeholder="min" name="min" value="" id="min" />
+            </div>   
+            <div class="input-group">     
+            <div class="input-group-addon">$</div>
+                <input class="form-control" type="number" step="any" placeholder="max" name="max" value="" id="max" />
+            </div>  
+         </div>
+                <!-- end price filter -->
+            <div class="input-group">
+               
+                {{ Form::checkbox('medium[]', 'paint') }} Paint
+                {{ Form::checkbox('medium[]', 'photography') }}
+                {{ Form::checkbox('medium[]', 'sculpture') }} Sculpture
+            </div>
+            <div class="input-group">
+                <button class="btn btn-secondary" type="submit">
+                    Submit
+                </button>
+            </div>
+        {{ Form::close() }}
+          
+        </form>
         <!-- End Price Filter -->
     @if ($images->isEmpty())
         <div class="row">Sorry but we found no search results.</div>
