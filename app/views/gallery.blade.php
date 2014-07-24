@@ -28,6 +28,7 @@
          </div>
                 <!-- end price filter -->
             <div class="input-group">
+
             <br>
             {{ Form::label('By Type')}}
             <br>
@@ -85,8 +86,13 @@
                 </div>
             </div>
             <!-- End Row -->
+<<<<<<< HEAD
         <!-- </div> -->
       </div>  <!--End Container -->
+=======
+        </div>
+        <!--End Container -->
+>>>>>>> master
 </div>
 <!-- End Container -->
 
