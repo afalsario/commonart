@@ -86,13 +86,13 @@
                 </div>
             </div>
             <!-- End Row -->
-<<<<<<< HEAD
+
         <!-- </div> -->
       </div>  <!--End Container -->
-=======
+
         </div>
         <!--End Container -->
->>>>>>> master
+
 </div>
 <!-- End Container -->
 
