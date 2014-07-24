@@ -2,6 +2,12 @@
 
 .profile-img img {
 	width:100%;
+	overflow: hidden;
 }
 
-
+.form-inline {
+	margin: 20px; 
+}
+a {
+	color:#FF5733;
+}

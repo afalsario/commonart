@@ -3,10 +3,8 @@
 @section('content')
 
 <!-- Site Wrapper -->
-<br>
 <div class="container">
     <div class="row">
-
         <form class="form-inline" role="form">
             <div class="form-group">
                 {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
@@ -28,9 +26,8 @@
          </div>
                 <!-- end price filter -->
             <div class="input-group">
-               
                 {{ Form::checkbox('medium[]', 'paint') }} Paint
-                {{ Form::checkbox('medium[]', 'photography') }}
+                {{ Form::checkbox('medium[]', 'photography') }} Photography
                 {{ Form::checkbox('medium[]', 'sculpture') }} Sculpture
             </div>
             <div class="input-group">
@@ -47,7 +44,7 @@
     @else
         <!-- Start Container -->
         <!-- <div class="site-wrapper"> -->
-                <div class="row">
+        <div class="row">
             <div class="container-fluid">
                     @foreach($images as $image)
                         <!-- Item Discription -->
@@ -84,9 +81,7 @@
         <!-- </div> -->
         <!--End Container -->
 </div>
+</div>
 <!-- End Container -->
-
-
-
-
 @stop
+
