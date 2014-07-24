@@ -4,43 +4,48 @@
 
 <!-- Site Wrapper -->
 <br>
-<div class="container">
-    <div class="row">
 
-        <form class="form-inline" role="form">
+        <form class="search_form form-inline" role="form">
             <div class="form-group">
                 {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
-                <label class="sr-only" for="search">Search</label> 
-                <input type="text" class="form-control" name="search" id="search" placeholder="search...">  
+                <label for="search">Search Gallery</label>
+                <input type="text" class="form-control" name="search" id="search" placeholder="search...">
             </div>
-        <!-- <input type="submit" value="Search"> -->
         <!-- Price filter -->
+        <br>
+        <br>
+        <label for="min">By Price</label>
          <div class="form-group">
             <div class="input-group">
                 <div class="input-group-addon">$</div>
                   {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET', 'id' => 'input-price-range', 'class' => 'common-form')) }}
-                <input class="form-control" type="number" step="any" placeholder="min" name="min" value="" id="min" />
-            </div>   
-            <div class="input-group">     
+                <input class="price form-control" type="number" step="any" placeholder="min" name="min" value="" id="min" />
+            </div>
+            <div class="input-group">
             <div class="input-group-addon">$</div>
-                <input class="form-control" type="number" step="any" placeholder="max" name="max" value="" id="max" />
-            </div>  
+                <input class="price form-control" type="number" step="any" placeholder="max" name="max" value="" id="max" />
+            </div>
          </div>
                 <!-- end price filter -->
             <div class="input-group">
-               
-                {{ Form::checkbox('medium[]', 'paint') }} Paint
-                {{ Form::checkbox('medium[]', 'photography') }} Photography
-                {{ Form::checkbox('medium[]', 'sculpture') }} Sculpture
+
+            <br>
+            {{ Form::label('By Type')}}
+            <br>
+                {{ Form::checkbox('medium[]', 'paint') }} {{ Form::label('paint', 'Paint') }}<br>
+                {{ Form::checkbox('medium[]', 'photography') }} {{ Form::label('paint', 'Photography') }}<br>
+                {{ Form::checkbox('medium[]', 'sculpture') }} {{ Form::label('paint', 'Sculpture') }}<br>
             </div>
             <div class="input-group">
-                <button class="btn btn-secondary" type="submit">
+            <br>
+                <button class="search-btn btn btn-secondary" type="submit">
                     Submit
                 </button>
             </div>
         {{ Form::close() }}
-          
         </form>
+<div class="container">
+    <div class="search_container row">
         <!-- End Price Filter -->
     @if ($images->isEmpty())
         <div class="row">Sorry but we found no search results.</div>
@@ -52,7 +57,7 @@
                     @foreach($images as $image)
                         <!-- Item Discription -->
                         <div class="col-sm-6 col-md-4 project-item">
-                            <div class="thumbnail projects-thumbnail">
+                            <div class="gallery thumbnail projects-thumbnail">
                                 <a href="{{action('UsersController@show', array($image->user->username))}}">
                                     <img src="{{{ $image->img_path }}}">
                                 </a>
@@ -81,8 +86,13 @@
                 </div>
             </div>
             <!-- End Row -->
+<<<<<<< HEAD
+        <!-- </div> -->
+      </div>  <!--End Container -->
+=======
         </div>
         <!--End Container -->
+>>>>>>> master
 </div>
 <!-- End Container -->
 
