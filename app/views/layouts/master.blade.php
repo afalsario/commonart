@@ -18,6 +18,7 @@
         <!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset;=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/assets/fonts/montserrat/style.css">
+        <link rel="stylesheet" href="/assets/css/ca_style.css">
       @yield('topscript')
     </head>
     <body>
@@ -100,20 +101,8 @@
                     </div>
                     <!-- Footer Social Icons -->
                     <div class="col-md-4 text-center">
-                        <a href="#">
-                            <i class="fa fa-facebook fa-lg"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-twitter fa-lg"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-pinterest-square fa-lg"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-dribbble fa-lg"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-behance fa-lg"></i>
+                        <a href="http://commonart.dev/about">
+                            About Us
                         </a>
                     </div>
                     <!-- Up Button -->

@@ -5,8 +5,8 @@
 <!-- Site Wrapper -->
 <br>
 <div class="container">
-    <!-- Start Row -->
     <div class="row">
+
         <form class="form-inline" role="form">
             <div class="form-group">
                 {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
@@ -30,9 +30,7 @@
             <div class="input-group">
                
                 {{ Form::checkbox('medium[]', 'paint') }} Paint
-                    <br>
-                {{ Form::checkbox('medium[]', 'photography') }} Photography
-                    <br>
+                {{ Form::checkbox('medium[]', 'photography') }}
                 {{ Form::checkbox('medium[]', 'sculpture') }} Sculpture
             </div>
             <div class="input-group">
@@ -44,11 +42,13 @@
           
         </form>
         <!-- End Price Filter -->
-
+    @if ($images->isEmpty())
+        <div class="row">Sorry but we found no search results.</div>
+    @else
         <!-- Start Container -->
-        <div class="site-wrapper">
-            <div class="container-fluid">
+        <!-- <div class="site-wrapper"> -->
                 <div class="row">
+            <div class="container-fluid">
                     @foreach($images as $image)
                         <!-- Item Discription -->
                         <div class="col-sm-6 col-md-4 project-item">
@@ -71,6 +71,7 @@
                             </div>
                         </div>
                 	@endforeach
+    @endif
                         <!-- Pagination -->
                         <div class="col-lg-12 text-center padding-bottom">
                             <ul class="pagination">
@@ -80,10 +81,8 @@
                 </div>
             </div>
             <!-- End Row -->
-        </div>
+        <!-- </div> -->
         <!--End Container -->
-    </div>
-    <!-- End Row -->
 </div>
 <!-- End Container -->
 
