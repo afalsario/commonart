@@ -56,6 +56,7 @@ class ImageController extends \BaseController {
 		$images = $query->paginate(6);
 
     	return View::make('gallery')->with('images', $images);
+
 	}
 
 

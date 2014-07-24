@@ -13,6 +13,6 @@
 	<br>
 	<p>Price: {{{ $image->price }}}</p> 
 	<br>
-	<p>Discription: {{{ $image->img_desc }}}</p> 
+	<p>Description: {{{ $image->img_desc }}}</p> 
 </div>
 @stop
