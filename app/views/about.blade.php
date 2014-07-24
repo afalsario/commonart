@@ -85,11 +85,10 @@
                                     <!-- Info -->
                                     <h5> Jack of all Trades </h5>
                                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-github fa-lg"></i></a>
+                                    <a href="mailto:agarza1972@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
+                                    <a href="https://twitter.com/PackerAnt"><i class="fa fa-twitter fa-2x"></i></a>
+                                    <a href="https:linkedin.com/in/anthonyggarza/"><i class="fa fa-linkedin fa-2x"></i></a>
+                                    <a href="https://github.com/AnthonyGarza"><i class="fa fa-github fa-2x"></i></a>
                             </div>
                         </div>
 
@@ -107,11 +106,10 @@
                                     <!-- Info -->
                                     <h5> Database Sommelier </h5>
                                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-github fa-lg"></i></a>
+                                    <a href="mailto:a_falsario@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
+                                    <a href="https:twitter.com/_falsario"><i class="fa fa-twitter fa-2x"></i></a>
+                                    <a href="https:linkedin.com/in/ashleyfalsario"><i class="fa fa-linkedin fa-2x"></i></a>
+                                    <a href="https://github.com/afalsario"><i class="fa fa-github fa-2x"></i></a>
                             </div>
                         </div>
                         <!-- Team Item (name, information about, image, social icons) -->
@@ -128,11 +126,10 @@
                                     <!-- Info -->
                                     <h5> Front-End Jedi </h5>
                                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-github fa-lg"></i></a>
+                                    <a href="mailto:azuniga90@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
+                                    <a href="https://twitter.com/alex_zuniga90"><i class="fa fa-twitter fa-2x"></i></a>
+                                    <a href="https://www.linkedin.com/in/alexzuniga"><i class="fa fa-linkedin fa-2x"></i></a>
+                                    <a href="https://github.com/alexanderzuniga"><i class="fa fa-github fa-2x"></i></a>
                             </div>
                         </div>
 

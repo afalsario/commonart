@@ -30,7 +30,7 @@
             <div class="input-group">
                
                 {{ Form::checkbox('medium[]', 'paint') }} Paint
-                {{ Form::checkbox('medium[]', 'photography') }}
+                {{ Form::checkbox('medium[]', 'photography') }} Photography
                 {{ Form::checkbox('medium[]', 'sculpture') }} Sculpture
             </div>
             <div class="input-group">
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <!-- End Row -->
-        <!-- </div> -->
+        </div>
         <!--End Container -->
 </div>
 <!-- End Container -->
