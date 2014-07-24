@@ -20,7 +20,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <!-- Description -->
                         <div class="col-md-6">
-                            <p><span>LARX</span> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p><span>COMMON ART SA</span> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                             <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                             <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
                         </div>
@@ -69,71 +69,70 @@
                     <div class="title-devider"></div>
                 </div>
                 <div class="container">
-                    <div class="row">  
+                    <div class="row">
 
-                        <!-- Team Item (name, information about, image, social icons) -->                      
+                        <!-- Team Item (name, information about, image, social icons) -->
                         <div class="col-xs-6 col-md-4 team-item">
                             <!-- Image -->
                             <div class="thumbnail team-inner">
-                                <img src="assets/img/about/image4.jpg" alt="Specifie an alternate text for an image">                                
+                                <img src="assets/img/about/image4.jpg" alt="Specifie an alternate text for an image">
                             </div>
                             <div class="team-caption">
                                     <!-- Name -->
-                                    <div class="team-title">         
-                                        <h3>Anthony Garza </h3>                            
+                                    <div class="team-title">
+                                        <h3>Anthony Garza </h3>
                                     </div>
                                     <!-- Info -->
                                     <h5> Jack of all Trades </h5>
                                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>                
+                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-behance fa-lg"></i></a>
+                                    <a href="#"><i class="fa fa-github fa-lg"></i></a>
                             </div>
                         </div>
 
-                        <!-- Team Item (name, information about, image, social icons) -->                      
+                        <!-- Team Item (name, information about, image, social icons) -->
                         <div class="col-xs-6 col-md-4 team-item">
                             <!-- Image -->
                             <div class="thumbnail team-inner">
-                                <img src="assets/img/about/image5.jpg" alt="Specifie an alternate text for an image">                                
+                                <img src="assets/img/about/image5.jpg" alt="Specifie an alternate text for an image">
                             </div>
                             <div class="team-caption">
                                     <!-- Name -->
-                                    <div class="team-title">         
+                                    <div class="team-title">
                                         <h3>Ashley Falsario</h3>
                                     </div>
                                     <!-- Info -->
-                                    <h5> Database Sommelier </h5>  
+                                    <h5> Database Sommelier </h5>
                                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>                
+                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-behance fa-lg"></i></a>              
+                                    <a href="#"><i class="fa fa-github fa-lg"></i></a>
                             </div>
-                        </div>            
-
-                        <!-- Team Item (name, information about, image, social icons) -->                      
+                        </div>
+                        <!-- Team Item (name, information about, image, social icons) -->
                         <div class="col-xs-6 col-md-4 team-item">
                             <!-- Image -->
                             <div class="thumbnail team-inner">
-                                <img src="assets/img/about/image7.jpg" alt="Specifie an alternate text for an image">                                
+                                <img src="assets/img/about/image7.jpg" alt="Specifie an alternate text for an image">
                             </div>
                             <div class="team-caption">
                                     <!-- Name -->
-                                    <div class="team-title">     
+                                    <div class="team-title">
                                         <h3>Alex Zuniga</h3>
                                     </div>
                                     <!-- Info -->
                                     <h5> Front-End Jedi </h5>
                                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>                
+                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-behance fa-lg"></i></a>
+                                    <a href="#"><i class="fa fa-github fa-lg"></i></a>
                             </div>
                         </div>
 
