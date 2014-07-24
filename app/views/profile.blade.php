@@ -16,11 +16,11 @@
                     <!-- Project Image Gallery (for more images in your gallery, image width can be changed in styles.css class gallery-inner) -->
                     <div class="col-md-4">
                         <div class="profile-img">
-                            @if($user->img_path) 
+                            @if($user->img_path)
                             <img src="{{{$user->img_path}}}" alt="Specifie an alternate text for an image">
                             @else
                             <img src="/assets/img/portfolio/image1.jpg" alt="Profile Image"> 
-                            @endif 
+                            @endif
                         </div>
                     </div>
 

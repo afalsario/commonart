@@ -122,11 +122,11 @@
             // Hide the total progress bar when nothing's uploading anymore
             this.on("queuecomplete", function(progress) {
                 document.querySelector("#total-progress").style.opacity = "0";
+                alert('Successful Upload!');
             });
 
             this.on("complete", function(file) {
                 console.log('success');
-                alert('Successful Upload!');
                 file.previewElement.querySelector(".progress").style.opacity = "0";
             });
         }
@@ -146,7 +146,7 @@
     </script>
     <hr>
     <div class="container">
-    After all your images are uploaded, let's go back to your profile and edit the descriptions!
+    <p>After all your images are uploaded, let's go back to your profile and edit the descriptions!</p>
     <br>
     <a href="{{action('UsersController@show', array(Auth::user()->username))}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Edit </a>
     </div>

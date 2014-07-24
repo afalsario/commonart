@@ -18,3 +18,11 @@
 	font-size: 16px;
 	font-weight: bolder; 
 }
+
+.social_links{
+    -webkit-box-sizing: initial;
+}
+
+.price{
+    width:50px;
+}
