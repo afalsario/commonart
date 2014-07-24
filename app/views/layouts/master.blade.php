@@ -5,6 +5,7 @@
         <!-- Meta Tags -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="/assets/img/about/casa_logo.jpg">
 
         <!-- Css Global Compulsory -->
         <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -13,6 +14,7 @@
         <link rel="stylesheet" href="/assets/plugins/lightbox/css/lightbox.css">
         <!-- Css Theme -->
         <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/ca_style.css">
         <!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset;=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/assets/fonts/montserrat/style.css">

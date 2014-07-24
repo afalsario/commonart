@@ -1,20 +1,7 @@
 /* Inner Projects Styles */
 
-.projects-thumbnail img{
-
-	display:block;
-	height: auto;	
+.profile-img img {
+	width:100%;
 }
 
-.profile-img {
-	text-align: center;
-}
 
-.project-inner img {
-	display: block;
-	margin: auto;	
-}
-.col-md-4 {
-	font-size: 16px;
-	font-weight: bolder; 
-}
