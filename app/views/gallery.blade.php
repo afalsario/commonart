@@ -3,9 +3,11 @@
 @section('content')
 
 <!-- Site Wrapper -->
+
 <br>
 
         <form class="search_form form-inline" role="form">
+
             <div class="form-group">
                 {{ Form::open(array('action' => 'ImageController@index', 'method' => 'GET')) }}
                 <label for="search">Search Gallery</label>
@@ -29,12 +31,14 @@
                 <!-- end price filter -->
             <div class="input-group">
 
+
             <br>
             {{ Form::label('By Type')}}
             <br>
                 {{ Form::checkbox('medium[]', 'paint') }} {{ Form::label('paint', 'Paint') }}<br>
                 {{ Form::checkbox('medium[]', 'photography') }} {{ Form::label('paint', 'Photography') }}<br>
                 {{ Form::checkbox('medium[]', 'sculpture') }} {{ Form::label('paint', 'Sculpture') }}<br>
+
             </div>
             <div class="input-group">
             <br>
@@ -52,7 +56,7 @@
     @else
         <!-- Start Container -->
         <!-- <div class="site-wrapper"> -->
-                <div class="row">
+        <div class="row">
             <div class="container-fluid">
                     @foreach($images as $image)
                         <!-- Item Discription -->
@@ -86,17 +90,9 @@
                 </div>
             </div>
             <!-- End Row -->
-
-        <!-- </div> -->
-      </div>  <!--End Container -->
-
         </div>
         <!--End Container -->
-
 </div>
 <!-- End Container -->
-
-
-
-
 @stop
+

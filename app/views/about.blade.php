@@ -20,15 +20,16 @@
                     <div class="col-md-10 col-md-offset-1">
                         <!-- Description -->
                         <div class="col-md-6">
-                            <p><span>COMMON ART SA</span> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <span>COMMON ART SA</span> 
+                            <p>In the spring of 2013, one of our developers had the privilege to attend an art collector panel held at the <a href="http://www.hausmannmillworks.com/"> Hausmann Millworks </a>here in San Antonio. What was taken away was a new perspective on what art is, and can be to people everywhere.  </p>
+                            <p>From the mouths of men who are fully capable of spending unreasonable amounts on eloquent peices of art, it was advised that good art, great art, does NOT need to be expensive. </p>
+                            <p>The vast majority of people assume the art world is a special place in Europe reserved for CEO's and movie stars. The truth is, the beauty in a peice of art is dictated by the person beholding it. A pricetage with "X" amount of zero's is irrelevant. </p>
                         </div>
                         <!-- Description -->
                         <div class="col-md-6">
-                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-                            <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. </p>
+                            <p>San Antonio is a unique and thriving cultural center with artists who are just as vibrant. Often these diamonds in the rough are overlooked due to a lack of resources for them to reach the masses of their own hometown. </p>
+                            <p>Sure there are plenty of webites to buy and sell peices of art to and from people around the world. We believe there is comparable art talent right here in our city. Meet the Alamo City artists that are in your own neighborhood. </p>
+                            <p>Art is NOT only in Paris or New York, and amazing works are NOT reserved only the upper echelon of society. Common people have the right to Common Art. </p>
                         </div>
                     </div>
 
