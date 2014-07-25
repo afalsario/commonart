@@ -6,6 +6,7 @@
         <h2>{{{ $user->first_name }}}'s ArtSpace </h2>
         <div class="title-devider"></div>
     </div>
+   <!--  <div class="skulls"> -->
     <div class="container">
         <!-- Site Wrapper -->
         <div class="site-wrapper">
@@ -97,9 +98,9 @@
 
                                     <!-- Button trigger modal -->
                                     @if (Auth::check() && (Auth::user()->id == $user->id))
-                                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
+                                        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
                                             Edit
-                                        </button>
+                                        </a>
 
                                         <button class="deleteImage btn btn-md btn-danger" data-imageid="{{ $image->id }}">Delete</button>
                                         {{ Form::open(array('action' => 'ImageController@destroy', 'id' => 'deleteForm', 'method' => 'DELETE')) }}
@@ -110,7 +111,7 @@
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                        <a type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</a>
                                                         <h4 class="modal-title" id="{{ 'myModalLabel-' . $image->id }}">{{{ $image->img_title }}}</h4>
                                                     </div>
                                                     <div class="modal-body">
@@ -133,7 +134,7 @@
                                                             <br>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <a type="button" class="btn btn-primary" data-dismiss="modal">Close</a>
                                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                                         {{ Form::close() }}
                                                     </div>
@@ -143,9 +144,9 @@
                                 </div>
                             </div>
                         @else
-                            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
+                            <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{'myModal-' . $image->id }}">
                                 View
-                            </button>
+                            </a>
                             <!-- Modal -->
                             <div class="modal fade" id="{{'myModal-' . $image->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -180,6 +181,7 @@
             </section>
         </div><!-- container -->
     </div>
+<!-- </div>  --><!-- skulls -->
 @stop
 
 

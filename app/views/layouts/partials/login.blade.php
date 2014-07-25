@@ -42,7 +42,7 @@
 									<div class="control-group">
 										<!-- Button for Login -->
 										<div class="controls">
-											<button type="submit" class="btn btn-lg btn-success">Login</button>
+											<a type="submit" class="btn btn-lg btn-primary">Login</a>
 										</div>
 									</div>
 								</fieldset>
@@ -53,7 +53,7 @@
 							{{ Form::open(array('action'=>'UsersController@store', 'class' => 'form-signup')) }}
 							<fieldset>
 								<div id="legend">
-									<legend class="">Register</legend>
+									<a class="btn btn-lg btn-primary">Register</a>
 								</div>
 
 								<!-- <div class="control-group"> -->
