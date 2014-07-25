@@ -146,9 +146,8 @@
     </script>
     <hr>
     <div class="container">
-    <p>After all your images are uploaded, let's go back to your profile and edit the descriptions!</p>
     <br>
-    <a href="{{action('UsersController@show', array(Auth::user()->username))}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Edit </a>
+    <a href="{{action('UsersController@show', array(Auth::user()->username))}}" class="btn btn-primary"><i class="icon-white icon-heart"></i> Edit Images </a>
     </div>
 @stop
 

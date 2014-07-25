@@ -40,6 +40,7 @@
         <!-- End Slider -->
 
         <!-- Site Wrapper -->
+        <!-- <div class="skulls"> -->
         <div class="site-wrapper">
 
             <!-- Who We Are -->
@@ -69,5 +70,5 @@
 
         </div><!-- /site-wrapper -->
         <!-- End Site Wrapper -->
-
+       <!--  </div> -->
 @stop

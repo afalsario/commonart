@@ -43,8 +43,11 @@
 	            <p>{{ Form::label('About Me')}}
 	            {{ Form::textarea('about_me') }}</p>
 	        </div>
-	            {{ Form::submit('Submit') }}
-	       		{{ Form::close() }}
+	        <div class="submit button">
+	            <button type="submit" class="btn btn-primary">Save changes</button>
+	        	{{ Form::close() }}
+	        </div>   
+	       	<br>
 	    </div>
 	</div>
 </div>
