@@ -42,38 +42,18 @@
 									<div class="control-group">
 										<!-- Button for Login -->
 										<div class="controls">
-											<a type="submit" class="btn btn-lg btn-primary">Login</a>
+											<button type="submit" class="btn btn-lg btn-primary">Login</button>
 										</div>
 									</div>
 								</fieldset>
 							{{ Form::close() }}
 						</div>
-
 						<div class="tab-pane fade" id="create">
 							{{ Form::open(array('action'=>'UsersController@store', 'class' => 'form-signup')) }}
 							<fieldset>
 								<div id="legend">
-									<a class="btn btn-lg btn-primary">Register</a>
+									<legend class="">Register</legend>
 								</div>
-
-								<!-- <div class="control-group"> -->
-									<!-- First Name -->
-									<!-- <label class="control-label"  for="first_name">First Name</label>
-									<div class="controls">
-										<input type="text" id="first_name" name="first_name" placeholder="First Name..." class="input-xlarge" value"{{{ Input::old('user->first_name')}}}"></input>
-										{{ $errors->first('first_name', '<span class="help-block">:message</span></br>') }}
-									</div>
-								</div>
- -->
-								<!-- <div class="control-group"> -->
-									<!-- Last Name -->
-									<!-- <label class="control-label"  for="last_name">Last Name</label>
-									<div class="controls">
-										<input type="text" id="last_name" name="last_name" placeholder="Last Name..." class="input-xlarge" value"{{{ Input::old('user->last_name')}}}"></input>
-										{{ $errors->first('last_name', '<span class="help-block">:message</span></br>') }}
-									</div>
-								</div> -->
-
 								<div class="control-group">
 									<!-- Username -->
 									<label class="control-label"  for="username">Username</label>
@@ -100,14 +80,11 @@
 										{{ $errors->first('password', '<span class="help-block">:message</span></br>') }}
 									</div>
 								</div>
-
 								<br>
-
 								<div class="control-group">
 									<!-- Button for Create -->
 									<div class="controls">
 										<button type="submit" class="btn btn-lg btn-primary">Sign Up</button>
-
 									</div>
 								</div>
 							</fieldset>
@@ -115,7 +92,7 @@
 						</div>
 					</div>
 				</div>
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        	  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Cancel</button>
 			</div>
         <!-- end code -->
       </div>
