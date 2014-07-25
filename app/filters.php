@@ -54,6 +54,15 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
+Route::filter('isAdmin', function() {
+	if(Auth::check() && Auth::user()->isAdmin == 1)
+	{
+
+	} else {
+		return Redirect::action('HomeController@showHomepage');
+	}
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter
