@@ -38,11 +38,10 @@
                 {{ Form::checkbox('medium[]', 'paint') }} {{ Form::label('paint', 'Paint') }}<br>
                 {{ Form::checkbox('medium[]', 'photography') }} {{ Form::label('paint', 'Photography') }}<br>
                 {{ Form::checkbox('medium[]', 'sculpture') }} {{ Form::label('paint', 'Sculpture') }}<br>
-
             </div>
             <div class="input-group">
             <br>
-                <button class="search-btn btn btn-secondary" type="submit">
+                <button class="search-btn btn btn-primary" type="submit">
                     Submit
                 </button>
             </div>
