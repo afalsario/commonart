@@ -11,7 +11,18 @@
 }
 a {
 	color:#FF5733;
-
+}
+.btn-primary {
+	background-color: #00B270;
+}
+a.btn-primary:hover {
+	background-color: #00FFA0;
+}
+.btn-danger {
+	background-color: #FF2D00;
+}
+button.btn-primary:hover {
+	background-color: #00FFA0;
 }
 
 #min, #max{
