@@ -101,7 +101,7 @@
                     </div>
                     <!-- Footer Social Icons -->
                     <div class="col-md-4 text-center">
-                        <a href="http://commonart.dev/about">
+                        <a href="{{action('HomeController@showAbout')}}">
                             About Us
                         </a>
                     </div>
