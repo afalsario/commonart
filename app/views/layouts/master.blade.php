@@ -66,7 +66,7 @@
                                                    @endif
                                                     <li><a href="{{action('UsersController@show', array(Auth::user()->username))}}">My Art Space </a></li>
                                                     <li><a href="{{ action('UsersController@edit', array(Auth::user()->id))}}">Update Profile</a></li>
-                                                    <li><a href="http://commonart.dev/upload">Update Gallery</a></li>
+                                                    <li><a href="{{ action('ImageController@doUpload')}}">Update Gallery</a></li>
                                                     <li><a href="{{ action('HomeController@logout')}}">Logout</a></li>
                                                 </ul>
                                             </li>

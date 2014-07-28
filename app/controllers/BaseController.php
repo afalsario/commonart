@@ -4,8 +4,7 @@ class BaseController extends Controller {
 
 	public function __construct()
 	{
-	    // require csrf token for all post, delete, and put actions
-	    $this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
+	    $this->beforeFilter('csrf', array('on'=>['post', 'delete', 'put']));
 	}
 
 	/**
