@@ -70,6 +70,9 @@ button.btn-primary:hover {
 #search{
     width:150px;
 }
+.navbar-default .navbar-nav>li>a {
+    color:#FFF;
+}
 
 .skulls {
     background-image: url('skulls.png');
