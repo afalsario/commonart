@@ -84,8 +84,8 @@
                                         <h3>Anthony Garza </h3>
                                     </div>
                                     <!-- Info -->
-                                    <h5> Web Developer </h5>
-                                    <p>I am passionate about web development and want to create applications that users will enjoy.</p>
+                                    <h5> Jack of all Trades </h5>
+                                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
                                     <a href="mailto:agarza1972@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
                                     <a href="https://twitter.com/PackerAnt"><i class="fa fa-twitter fa-2x"></i></a>
                                     <a href="https:linkedin.com/in/anthonyggarza/"><i class="fa fa-linkedin fa-2x"></i></a>
@@ -97,7 +97,7 @@
                         <div class="col-xs-6 col-md-4 team-item">
                             <!-- Image -->
                             <div class="thumbnail team-inner">
-                                <img src="assets/img/about/ashley01.jpg" alt="Specifie an alternate text for an image">
+                                <img src="assets/img/about/Ashley01.jpg" alt="Specifie an alternate text for an image">
                             </div>
                             <div class="team-caption">
                                     <!-- Name -->
@@ -126,7 +126,7 @@
                                     </div>
                                     <!-- Info -->
                                     <h5> Front-End Jedi </h5>
-                                    <p>Reaching users on a pychological level based on the aesthetics of a site is genuinely exciting to me. </p>
+                                    <p>Reaching users on a psychological level based on the aesthetics of a site is genuinely exciting to me. </p>
                                     <a href="mailto:azuniga90@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
                                     <a href="https://twitter.com/alex_zuniga90"><i class="fa fa-twitter fa-2x"></i></a>
                                     <a href="https://www.linkedin.com/in/alexzuniga"><i class="fa fa-linkedin fa-2x"></i></a>
