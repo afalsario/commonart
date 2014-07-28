@@ -84,8 +84,8 @@
                                         <h3>Anthony Garza </h3>
                                     </div>
                                     <!-- Info -->
-                                    <h5> Jack of all Trades </h5>
-                                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                                    <h5> Web Developer </h5>
+                                    <p>I am passionate about web development and want to create applications that users will enjoy.</p>
                                     <a href="mailto:agarza1972@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
                                     <a href="https://twitter.com/PackerAnt"><i class="fa fa-twitter fa-2x"></i></a>
                                     <a href="https:linkedin.com/in/anthonyggarza/"><i class="fa fa-linkedin fa-2x"></i></a>
@@ -105,8 +105,8 @@
                                         <h3>Ashley Falsario</h3>
                                     </div>
                                     <!-- Info -->
-                                    <h5> Database Sommelier </h5>
-                                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                                    <h5> Full Stack Web Developer </h5>
+                                    <p>I love to code.  Over the past three months, I have developed a passion for learning and solving problems with code. I am ready to jump into the field, apply my knowledge, and continue to build upon my foundation.</p>
                                     <a href="mailto:a_falsario@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
                                     <a href="https:twitter.com/_falsario"><i class="fa fa-twitter fa-2x"></i></a>
                                     <a href="https:linkedin.com/in/ashleyfalsario"><i class="fa fa-linkedin fa-2x"></i></a>
@@ -125,7 +125,7 @@
                                         <h3>Alex Zuniga</h3>
                                     </div>
                                     <!-- Info -->
-                                    <h5> Front-End Jedi </h5>
+                                    <h5> Front-End Jedi Developer </h5>
                                     <p>Reaching users on a psychological level based on the aesthetics of a site is genuinely exciting to me. </p>
                                     <a href="mailto:azuniga90@yahoo.com"><i class="fa fa-envelope fa-2x"></i></a>
                                     <a href="https://twitter.com/alex_zuniga90"><i class="fa fa-twitter fa-2x"></i></a>

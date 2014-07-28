@@ -54,8 +54,8 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="active"><a href="{{ action('HomeController@showHomepage')}}">Home</a></li>
 
-                                <li><a href="{{ action('ImageController@index')}}"> Gallery </a></li>
                                 <li><a href="{{ action('UsersController@index')}}">Artists</a></li>
+                                <li><a href="{{ action('ImageController@index')}}"> Gallery </a></li>
                                  @if(Auth::check())
 
                                             <li class="dropdown">
