@@ -40,11 +40,9 @@
             </div>
         </div>
         <!-- End Slider -->
-
         <!-- Site Wrapper -->
         <!-- <div class="skulls"> -->
         <div class="site-wrapper">
-
             <!-- Who We Are -->
             <div class="container text-center">
                 <!-- Section General Title -->
