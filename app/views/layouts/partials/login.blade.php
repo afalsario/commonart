@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h3 class="modal-title" id="myModalLabel">Have an Account?</h3>
+        <h3 class="modal-title" id="myModalLabel">Welcome Artists!</h3>
       </div>
       <div class="modal-body">
         <!-- begin code -->
