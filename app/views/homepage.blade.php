@@ -18,6 +18,7 @@
                     <!-- Description -->
                     <div class="carousel-caption header-carousel-caption">
                         <h1>Welcome To CommonArt</h1>
+
                         <!-- Project Link -->
                         <a href="{{ action('HomeController@showAbout')}}" class="btn white-btn">About Us</a>
                     </div>
@@ -30,9 +31,10 @@
 
                     <!-- Decription -->
                     <div class="carousel-caption header-carousel-caption">
-                        <h1>Featured Artist </h1>
+                        <h3>Featured Artist </h3>
+                        <h1>KEITH LIMON</h1>
                         <!-- Project Link -->
-                        <a href="project-inner.html" class="btn white-btn">View Project</a>
+                        <a href="http://commonart-sa.com/profiles/Keith_Limo" class="btn white-btn">View Shop</a>
                     </div>
                 </div>
             </div>
